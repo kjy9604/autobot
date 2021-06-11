@@ -1,0 +1,45 @@
+section div div[class="container"]{
+    position: relative;
+    left: 300px;
+    width: 70vw;
+}
+
+.container div[class="line_1"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    margin-bottom: 10px;
+}
+
+.container div[class="line_4"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-between;
+    padding-top: 10px;
+}
+
+.help_tip a{
+    padding: 13px;
+}
+
+/*=================================*/
+/*테이블 설정*/
+/*=================================*/
+
+table {
+    width: 100%;
+    border-top: 1px solid #444444;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: black;
+    color: white;
+}
+
+th, td {
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+}

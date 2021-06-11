@@ -1,0 +1,26 @@
+.setting_box{
+    display: flex;
+    flex-direction: column;
+}
+
+.setting_box div div button{
+    margin-left: 10px;
+}
+
+.main_button{
+    margin-right: 10px;
+}
+
+.s_button{
+    margin-top: -10px;
+}
+
+.s_button button{
+    height: 50px;
+    width: 150px;
+}
+
+.s_button button:hover{
+    height: 50px;
+    width: 150px;
+}
