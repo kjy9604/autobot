@@ -3,7 +3,7 @@ import '../../css/basic.css';
 
 function Header() {
     return (
-        <header className="back_ground">
+        <header className="header">
             <Menu/>
         </header>
     )

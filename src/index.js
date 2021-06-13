@@ -1,19 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Link, Route, useRouteMatch } from 'react-router-dom';
 import './index.css';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import Title from './components/common/Title';
+import Main from './components/autobot/Main';
+import Setting from './components/autobot/Setting';
+import SettingTest from './components/autobot/SettingTest';
+import Autobot from './components/autobot/Autobot';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Router>
       <Header />
       <Title />
-      <Home />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/autobot" component={Main} />
+        <Route exact path="/autobot/setting" component={Setting} />
+        <Route exact path="/autobot/test" component={SettingTest} />
+        <Route exact path="/autobot/pyramiding" component={Autobot} />
+      </Switch>
       <Footer />
-  </React.StrictMode>,
+  </Router>,
   document.getElementById('root')
 );
 

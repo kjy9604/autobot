@@ -95,7 +95,7 @@ li {
 .head_title {
     background-color: rgba(0,0,0,0.9);
     height: 30vh;
-    width: 100vw;
+    width: 100%;
     display: table;
     margin-bottom: 2vh;
 }
@@ -178,7 +178,7 @@ li {
     border-radius: 8px;
     /*border: 2px solid navy;*/
     /*color:black;*/
-    background-color: navy;
+    background-color: #562AAA;
     color:#fff;
     font-size:1.3rem;
     cursor:pointer;
@@ -294,7 +294,7 @@ li {
 footer {
     background-color: black;
     height: 40vh;
-    width: 100vw;
+    width: 100%;
     display: table;
     /* margin-top: 20vh; */
 }
