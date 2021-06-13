@@ -28,10 +28,10 @@ function Showcase () {
                             </div>
                         </div>
                         <div className="download-area">
-                            <div className="QR">
+                            <div className="QR-image">
                                 <img src="https://dk-enter.com/wp-content/uploads/elementor/thumbs/-2021-06-01-오전-2.05.33-p7ziuqcgdfsawp946wxwmwaedk3kdfhuts0zo9hi2g.png" title="스크린샷 2021-06-01 오전 2.05.33" alt="스크린샷 2021-06-01 오전 2.05.33" />
                             </div>
-                            <div>
+                            <div className="QR-content">
                                 <div>
                                     <h6>스캔하여 다운로드</h6>
                                 </div>
@@ -40,7 +40,7 @@ function Showcase () {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className="icon-container">
                             <div>
                                 <div className="icon-area">
                                     <a href="#">
@@ -68,7 +68,7 @@ function Showcase () {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="download-option">
                     <p>더 많은 다운로드 옵션 ></p>
                 </div>
             </div>
