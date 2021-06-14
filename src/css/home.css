@@ -361,7 +361,7 @@ th, td {
 .trade-btn1 {
     width: 200px;
     height: 52px;
-    background: #562AAA;
+    background: #4374D9;
     color: #fff;
     border-style: none;
     border: none;
@@ -371,28 +371,37 @@ th, td {
     font-weight: 600;
 }
 
-.trade-btn1:hover {
+/* .trade-btn1:hover {
     border: none;
     background-color: #fafafa;
     color: #562AAA;
     transition:800ms ease all;
-}
+} */
 
 .trade-btn2 {
     width: 200px;
     height: 52px;
     background: black;
-    color: #562AAA;
+    color: #4374D9;
     border-style: none;
-    border: solid 2px #562AAA;
+    border: solid 2px #4374D9;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     font-weight: 600;
 }
 
-.trade-btn2:hover {
+/* .trade-btn2:hover {
     background-color: #562AAA;
     color: white;
     transition:800ms ease all;
+} */
+
+#start_container {
+    margin: 0;
+    width: 100%;
+}
+
+#start_button {
+    background-color: rgba(0, 0, 0, 0.9);
 }

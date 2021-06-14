@@ -102,6 +102,7 @@ li {
     align-items: center;
     justify-content: center;
     margin-bottom: 2vh;
+    flex-direction: column;
 }
 
 .head_title div{
@@ -306,10 +307,14 @@ footer {
     background-color: black;
     height: 40vh;
     width: 100%;
-    display: table;
+    display: flex;
+    justify-content: center;
     /* margin-top: 20vh; */
 }
 
 footer > div {
+    max-width: 760px;
     color: white;
+    display: block;
+    width: 100%;
 }
