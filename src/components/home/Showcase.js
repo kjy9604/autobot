@@ -14,7 +14,7 @@ function Showcase () {
                 </div>
                 <div className="content-container">
                     <div className="showcase-image">
-                        <img width="576" height="421" 
+                        <img width="400" height="300" 
                             src="https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-1024x702.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-1024x702.png 1024w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-300x206.png 300w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-768x526.png 768w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06.png 1208w"
                             sizes="(max-width: 1024px) 100vw, 1024px" />
                     </div>

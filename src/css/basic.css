@@ -43,13 +43,15 @@ li {
 }
 
 .navbar{
-    max-width: 960px;
+    max-width: 760px;
     z-index: 9999;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    padding: 8px 12px;
+    /* padding: 8px 12px; */
+    padding-top: 8px;
+    padding-bottom: 8px;
     height: 50px;
     color: white;
     margin: 0px auto;
@@ -96,16 +98,25 @@ li {
     background-color: rgba(0,0,0,0.9);
     height: 30vh;
     width: 100%;
-    display: table;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 2vh;
 }
 
 .head_title div{
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 3rem;
+    max-width: 760px;
+    width: 100%;
+    text-align: left;
+    display: block;
+    /* vertical-align: middle; */
+    font-size: 4.5rem;
     font-weight: bold;
     color: white;
+}
+
+.head_title > div > p {
+
 }
 
 /*=================================*/
@@ -172,24 +183,24 @@ li {
     position:relative;
     /*padding:0 2em;*/
     outline:none;
-    height:60px;
-    width: 150px;
+    height: 40px;
+    width: 100px;
     border:none;
     border-radius: 8px;
     /*border: 2px solid navy;*/
     /*color:black;*/
-    background-color: #562AAA;
+    background-color: #4374D9;
     color:#fff;
     font-size:1.3rem;
     cursor:pointer;
     transition:800ms ease all;
 }
 
-.main_button:hover{
+/* .main_button:hover{
     border: none;
     color:white;
     background:#b2b2b2;
-}
+} */
 
 /*=================================*/
 /*s_button 설정*/
@@ -216,7 +227,7 @@ li {
     transition:800ms ease all;
 }
 
-.s_button button:hover{
+/* .s_button button:hover{
     padding: 0;
     display: inline-block;
     height: 30px;
@@ -230,7 +241,7 @@ li {
     font-size: 15px;
     cursor: pointer;
     transition:800ms ease all;
-}
+} */
 
 /*=================================*/
 /*l_button 설정*/
@@ -252,7 +263,7 @@ li {
     cursor: pointer;
 }
 
-.l_button button:hover{
+/* .l_button button:hover{
     margin: 4px;
     padding: 0;
     display: inline-block;
@@ -267,7 +278,7 @@ li {
     font-size: 15px;
     cursor: pointer;
     transition:800ms ease all;
-}
+} */
 
 /*=================================*/
 /*Ul li 설정*/

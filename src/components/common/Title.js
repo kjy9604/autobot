@@ -1,7 +1,7 @@
 function Title () {
     return (
         <div className="head_title">
-            <div>Auto 로봇</div>
+            <div><p>Auto 로봇</p></div>
         </div>
     )
 }

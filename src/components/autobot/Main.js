@@ -1,12 +1,12 @@
-import '../../css/basic.css';
 import {Link} from 'react-router-dom';
+import '../../css/main.css';
 
 function Main() {
 	return (
 		<section className="move">
 			<div className="content">
 				<div className="main_content">
-					<div className="line_1">
+					<div className="line_1" style={{flexDirection: "row"}}>
 						<div className="content_title">
 							<div>가동코인 Set</div>
 						</div>
@@ -15,12 +15,12 @@ function Main() {
 								<div>/</div>
 								<div>BTC</div>
 						</div>
-						<div></div>
-						<div>
+						<div className="button_container">
 							<Link to="/autobot/pyramiding"><button className="main_button" style={{margin: "10px"}}>로봇결재, 사용방법</button></Link>
 							<button className="main_button">거래소 바로가기</button>
 						</div>
 					</div>
+					<div class="horizon_line"></div>
 					<div className="line_2">
 						<ul>
 							<li><a>초기화 </a></li>
@@ -43,6 +43,7 @@ function Main() {
 							<Link to="autobot/setting"><button className="main_button">고급설정</button></Link>
 						</div>
 					</div>
+					<div class="horizon_line"></div>
 					<div>
 						<ul>
 							<li><a>공격적 </a></li>
@@ -82,7 +83,7 @@ function Main() {
 						<div className="content_title">
 							<div></div>
 						</div>
-						<div>
+						<div className="autosale_buttons">
 							<button>10%</button>
 							<button>25%</button>
 							<button>50%</button>

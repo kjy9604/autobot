@@ -1,7 +1,15 @@
+.content_title {
+    font-size: 2.5rem;
+}
+
+#autosale_append {
+    width: 100px;
+}
+
 .content {
     position: relative;
     display: flex;
-    max-width: 960px;
+    max-width: 760px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -36,10 +44,6 @@ section div div[class="container"]{
     padding-top: 10px;
 }
 
-.help_tip a{
-    padding: 13px;
-}
-
 /*=================================*/
 /*툴팁 설정*/
 /*=================================*/
@@ -56,6 +60,8 @@ section div div[class="container"]{
     background-color: white;
     padding: 0;
     /* color: white; */
+    border: solid 1px #4374D9;
+    border-radius: 3px;
     text-align: center;
     position: absolute;
     z-index: 1;
@@ -70,16 +76,6 @@ section div div[class="container"]{
     font-size: 11px;
 }
 
-.tooltip .tooltip-content::after {
-    content: " ";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: white transparent transparent transparent;
-}
 
 .tooltip:hover .tooltip-content {
     visibility: visible;
@@ -91,23 +87,27 @@ section div div[class="container"]{
 
 table {
     width: 100%;
-    border-top: 1px solid #444444;
     border-collapse: collapse;
 }
 
 th {
-    background-color: black;
-    color: white;
+    color: black;
 }
 
 th, td {
-    border-bottom: 1px solid #444444;
+    border-bottom: 1px solid #4374D9;
     padding: 10px;
+    font-size: 20px;
+    text-align: center;
 }
 
-td > input {
+td > input[type="checkbox"] {
     width: 100%;
     zoom: 1.5;
+}
+
+.m_text {
+    text-align: center;
 }
 
 /*=================================*/
@@ -116,4 +116,9 @@ td > input {
 
 .line_4 > div > h2 {
     font-size: 2em;
+}
+
+
+#pyramiding-div {
+    font-size: 24px;
 }
