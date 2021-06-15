@@ -19,14 +19,14 @@ function ImageSwiper() {
 		<Swiper
 			className="swiper-container"
 			spaceBetween={50}
-			slidesPerView={3}
+			slidesPerView={4}
 				navigation
 			pagination={{ clickable: true }}
 			scrollbar={{ draggable: true }}
 			onSwiper={(swiper) => console.log(swiper)}
 			onSlideChange={() => console.log("slide change")}
 		>
-			<SwiperSlide>slide1</SwiperSlide>
+			<SwiperSlide><img src="/img/swiper.png" /></SwiperSlide>
 			<SwiperSlide>slide2</SwiperSlide>
 			<SwiperSlide>slide3</SwiperSlide>
 		</Swiper>

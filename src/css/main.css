@@ -1,169 +1,344 @@
-/*=================================*/
-/*main_content 설정*/
-/*=================================*/
+@media (min-width: 360px) and (max-width: 759px) {
+    /*=================================*/
+    /*main_content 설정*/
+    /*=================================*/
 
-.content {
-    max-width: 760px;
+    .content {
+        max-width: 760px;
+    }
+
+    .main_content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .line_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .line_1 > div {
+        display: inline-block;
+    } */
+
+    /* .content_title {
+        margin-bottom: 3em;
+    } */
+
+    /* .s_text > div {
+        display: inline;
+        align-items: center;
+        margin-left: 10px;
+    } */
+
+    .s_text > div{
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
+
+    .button_container {
+        display: flex;
+        max-width: 400px;
+    }
+
+    .button_container > a, .button_container > button {
+        display: inline;
+    }
+
+    .button_container > button, .button_container > a > button {
+        width: 130px;
+    }
+
+    .horizon_line {
+        border-bottom: 2px solid #4374D9;
+    }
+
+    /*=================================*/
+    /*textbox 설정*/
+    /*=================================*/
+
+    .in-line{
+        height: 40px;
+        width: 40px;
+    }
+
+    input{
+        margin:0;
+    }
+
+    input[type="text"]{
+        width:400px;
+        height:100%;
+
+        border-left-width:0;
+        border-right-width:0;
+        border-top-width:0;
+        border-bottom-width:0.5px;
+
+        font-size:1em;
+        padding-left: 5px;
+        font-style: oblique;
+        display:inline;
+        outline:none;
+        box-sizing: border-box;
+        color:black;
+
+    }
+
+    input[type=button]{
+        width:40px;
+        height:100%;
+        border:none;
+        background-color: lightgray;
+        color:black;
+        font-size:1em;
+        outline:none;
+        display:inline;
+        margin-left: 0px;
+        box-sizing: border-box;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
+
+    /* input[type=button]:hover{
+        background-color: navy;
+        color: white;
+    } */
+
+    /*=================================*/
+    /*box 설정*/
+    /*=================================*/
+
+    .line_9 div div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        margin: 0 10px 0 10px;
+    }
+
+    .box_red{
+        height: 200px;
+        width: 400px;
+        background-color: #ffd3d1;
+    }
+    .box_blue{
+        height: 200px;
+        width: 400px;
+        background-color: #bddaff;
+    }
+
+    .box_2{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box_3{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .autosale_buttons {
+        max-width: 400px;
+        margin-right: 80px;
+        height: 100%
+    }
+
+    .autosale_buttons > button {
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        /* transition:800ms ease all; */
+    }
 }
 
-.main_content {
-    width: 100%;
-    position: relative;
-    display: flex;
-    padding: 0px;
-    margin: 0px;
-}
 
-.line_1 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
+@media (min-width: 760px) {
+    /*=================================*/
+    /*main_content 설정*/
+    /*=================================*/
 
-/* .line_1 > div {
-    display: inline-block;
-} */
+    .content {
+        max-width: 760px;
+    }
 
-/* .content_title {
-    margin-bottom: 3em;
-} */
+    .main_content {
+        width: 100%;
+        position: relative;
+        display: flex;
+        padding: 0px;
+        margin: 0px;
+    }
 
-/* .s_text > div {
-    display: inline;
-    align-items: center;
-    margin-left: 10px;
-} */
+    .line_1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
-.s_text > div{
-    align-items: center;
-    justify-content: center;
-    padding-top: 0px;
-}
+    /* .line_1 > div {
+        display: inline-block;
+    } */
 
-.button_container {
-    display: flex;
-    max-width: 400px;
-}
+    /* .content_title {
+        margin-bottom: 3em;
+    } */
 
-.button_container > a, .button_container > button {
-    display: inline;
-}
+    /* .s_text > div {
+        display: inline;
+        align-items: center;
+        margin-left: 10px;
+    } */
 
-.button_container > button, .button_container > a > button {
-    width: 130px;
-}
+    .s_text > div{
+        align-items: center;
+        justify-content: center;
+        padding-top: 0px;
+    }
 
-.horizon_line {
-    border-bottom: 2px solid #4374D9;
-}
+    .button_container {
+        display: flex;
+        max-width: 400px;
+    }
 
-/*=================================*/
-/*textbox 설정*/
-/*=================================*/
+    .button_container > a, .button_container > button {
+        display: inline;
+    }
 
-.in-line{
-    height: 40px;
-    width: 40px;
-}
+    .button_container > button, .button_container > a > button {
+        width: 130px;
+    }
 
-input{
-    margin:0;
-}
+    .horizon_line {
+        border-bottom: 2px solid #4374D9;
+    }
 
-input[type="text"]{
-    width:400px;
-    height:100%;
+    /*=================================*/
+    /*textbox 설정*/
+    /*=================================*/
 
-    border-left-width:0;
-    border-right-width:0;
-    border-top-width:0;
-    border-bottom-width:0.5px;
+    .in-line{
+        height: 40px;
+        width: 40px;
+    }
 
-    font-size:1em;
-    padding-left: 5px;
-    font-style: oblique;
-    display:inline;
-    outline:none;
-    box-sizing: border-box;
-    color:black;
+    input{
+        margin:0;
+    }
 
-}
+    input[type="text"]{
+        width:400px;
+        height:100%;
 
-input[type=button]{
-    width:40px;
-    height:100%;
-    border:none;
-    background-color: lightgray;
-    color:black;
-    font-size:1em;
-    outline:none;
-    display:inline;
-    margin-left: 0px;
-    box-sizing: border-box;
-    cursor:pointer;
-    transition:800ms ease all;
-}
+        border-left-width:0;
+        border-right-width:0;
+        border-top-width:0;
+        border-bottom-width:0.5px;
 
-/* input[type=button]:hover{
-    background-color: navy;
-    color: white;
-} */
+        font-size:1em;
+        padding-left: 5px;
+        font-style: oblique;
+        display:inline;
+        outline:none;
+        box-sizing: border-box;
+        color:black;
 
-/*=================================*/
-/*box 설정*/
-/*=================================*/
+    }
 
-.line_9 div div{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    padding: 0;
-    margin: 0 10px 0 10px;
-}
+    input[type=button]{
+        width:40px;
+        height:100%;
+        border:none;
+        background-color: lightgray;
+        color:black;
+        font-size:1em;
+        outline:none;
+        display:inline;
+        margin-left: 0px;
+        box-sizing: border-box;
+        cursor:pointer;
+        transition:800ms ease all;
+    }
 
-.box_red{
-    height: 200px;
-    width: 400px;
-    background-color: #ffd3d1;
-}
-.box_blue{
-    height: 200px;
-    width: 400px;
-    background-color: #bddaff;
-}
+    /* input[type=button]:hover{
+        background-color: navy;
+        color: white;
+    } */
 
-.box_2{
-    all: unset;
-    display: flex;
-    flex-direction: row;
-}
+    /*=================================*/
+    /*box 설정*/
+    /*=================================*/
 
-.box_3{
-    all: unset;
-    display: flex;
-    flex-direction: row;
-}
+    .line_9 div div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        padding: 0;
+        margin: 0 10px 0 10px;
+    }
 
-.autosale_buttons {
-    max-width: 400px;
-    margin-right: 80px;
-    height: 100%
-}
+    .box_red{
+        height: 200px;
+        width: 400px;
+        background-color: #ffd3d1;
+    }
+    .box_blue{
+        height: 200px;
+        width: 400px;
+        background-color: #bddaff;
+    }
 
-.autosale_buttons > button {
-    position:relative;
-    /*padding:0 2em;*/
-    outline:none;
-    height: 40px;
-    width: 100px;
-    border:none;
-    border-radius: 8px;
-    /*border: 2px solid navy;*/
-    /*color:black;*/
-    background-color: #4374D9;
-    color:#fff;
-    font-size:1.3rem;
-    cursor:pointer;
-    /* transition:800ms ease all; */
+    .box_2{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .box_3{
+        all: unset;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .autosale_buttons {
+        max-width: 400px;
+        margin-right: 80px;
+        height: 100%
+    }
+
+    .autosale_buttons > button {
+        position:relative;
+        /*padding:0 2em;*/
+        outline:none;
+        height: 40px;
+        width: 100px;
+        border:none;
+        border-radius: 8px;
+        /*border: 2px solid navy;*/
+        /*color:black;*/
+        background-color: #4374D9;
+        color:#fff;
+        font-size:1.3rem;
+        cursor:pointer;
+        /* transition:800ms ease all; */
+    }
 }

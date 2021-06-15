@@ -1,49 +1,107 @@
-.setting_box{
-    display: flex;
-    flex-direction: column;
+@media (min-width: 360px) and (max-width: 759px) {
+
+    .setting_box{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #load_button {
+        width: 120px;
+    }
+
+    .setting_box div div button{
+        margin-left: 10px;
+    }
+
+    .main_button{
+        margin-right: 10px;
+    }
+
+    .s_button{
+        margin-top: -10px;
+    }
+
+    .s_button button{
+        height: 50px;
+        width: 150px;
+    }
+
+    /* .s_button button:hover{
+        height: 50px;
+        width: 150px;
+    } */
+
+
+    #setting_options {
+        padding-top: 20px;
+        margin: 0px;
+    }
+
+    #section_setting_button {
+        width: 120px;
+        margin: 0px 3px 0px 0px;
+    }
+
+    #pyramiding_buttons {
+        justify-content: space-between;
+    }
+
+    #save_buttons > button {
+        width: 120px;
+    }
+
 }
 
-#load_button {
-    width: 120px;
-}
+@media (min-width: 760px) {
 
-.setting_box div div button{
-    margin-left: 10px;
-}
+    .setting_box{
+        display: flex;
+        flex-direction: column;
+    }
 
-.main_button{
-    margin-right: 10px;
-}
+    #load_button {
+        width: 120px;
+    }
 
-.s_button{
-    margin-top: -10px;
-}
+    .setting_box div div button{
+        margin-left: 10px;
+    }
 
-.s_button button{
-    height: 50px;
-    width: 150px;
-}
+    .main_button{
+        margin-right: 10px;
+    }
 
-/* .s_button button:hover{
-    height: 50px;
-    width: 150px;
-} */
+    .s_button{
+        margin-top: -10px;
+    }
+
+    .s_button button{
+        height: 50px;
+        width: 150px;
+    }
+
+    /* .s_button button:hover{
+        height: 50px;
+        width: 150px;
+    } */
 
 
-#setting_options {
-    padding-top: 20px;
-    margin: 0px;
-}
+    #setting_options {
+        padding-top: 20px;
+        margin: 0px;
+    }
 
-#section_setting_button {
-    width: 120px;
-    margin: 0px 3px 0px 0px;
-}
+    #section_setting_button {
+        width: 120px;
+        margin: 0px 3px 0px 0px;
+    }
 
-#pyramiding_buttons {
-    justify-content: space-between;
-}
+    #pyramiding_buttons {
+        justify-content: space-between;
+    }
 
-#save_buttons > button {
-    width: 120px;
+    #save_buttons > button {
+        width: 120px;
+    }
+
 }

@@ -47,12 +47,12 @@ function SettingTest() {
                     </div>
                 </div>
                 <div>
-                    <div>
+                    <div className="content_title">
                         <div className="pyramiding-checkbox">피라미딩 세팅 <input type="checkbox" name="pyramiding" /></div>
                         <div></div>
                     </div>
                 </div>
-                <div className="additional-option">
+                <div id="additional-option">
                     <div><button className="main_button">추가진입 +1%</button></div>
                     <div><button className="main_button">연속진입 3회</button></div>
                     <div><button className="main_button">최고 수익 실현 3</button></div>
