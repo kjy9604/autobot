@@ -1,11 +1,13 @@
 @media (min-width: 360px) and (max-width: 759px) {
 
     .content_title {
-        font-size: 1.2rem;
+        font-size: 2.2rem;
+        margin: 0 0 10px 0;
+        /* padding-left: 10px; */
     }
 
     #autosale_append {
-        width: 100px;
+        width: 45%;
     }
 
     .content {
@@ -18,7 +20,10 @@
         margin: 50px auto 50px auto;
     }
 
+
+
     .container {
+        padding-top: 20px;
         width: 100%;
         margin: 0 auto;
         display: inline-block;
@@ -32,10 +37,14 @@
 
     .container div[class="line_1"] {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        flex-direction: column;
+        align-items: flex-start;
         justify-content:space-between;
         margin-bottom: 10px;
+    }
+
+    .container div[class="line_1"] > div:nth-child(1) {
+        padding-left: 10px;
     }
 
     .container div[class="line_4"] {
@@ -53,7 +62,12 @@
     .tooltip {
         position: relative;
         display: inline-block;
-        margin: auto;
+        margin: 0 10px 0 4px;
+        width:45%;
+    }
+
+    .tooltip button {
+        width:100%;
     }
 
     .tooltip-content { 
@@ -68,7 +82,7 @@
         position: absolute;
         z-index: 1;
         bottom: 110%;
-        left: 30%;
+        left: 80%;
         margin-left: -110px;
         text-align: left;
     }
@@ -99,7 +113,7 @@
     th, td {
         border-bottom: 1px solid #4374D9;
         padding: 10px;
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
     }
 
@@ -110,6 +124,10 @@
 
     .m_text {
         text-align: center;
+    }
+
+    .m_text th  {
+        font-size:medium;
     }
 
     /*=================================*/
@@ -124,14 +142,28 @@
     #pyramiding-div {
         font-size: 22px;
         padding: 0 0 0 10px;
+        margin-left: 10px;
     }
+
+
+    .button_container {
+        width: 100%;
+    }
+
+
+
 }
 
 
 @media (min-width: 760px) {
 
+    .line_1 {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
     .content_title {
-        font-size: 2.5rem;
+        font-size: 30px;
     }
 
     #autosale_append {
@@ -184,6 +216,7 @@
         position: relative;
         display: inline-block;
         margin: auto;
+        width:45%;
     }
 
     .tooltip-content { 
@@ -252,6 +285,6 @@
 
 
     #pyramiding-div {
-        font-size: 24px;
+        font-size: 30px;
     }
 }

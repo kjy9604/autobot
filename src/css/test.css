@@ -12,6 +12,15 @@
         
     }
 
+    #test_term_container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* #test_term_container > button {
+        margin-left: 15px;
+    } */
+
     .content_title > div {
         padding-top: 0px;
         font-size: 22px;
@@ -21,7 +30,11 @@
         width: 235px;
     }
 
-    
+    #test_subtitle_button {
+
+        justify-content: space-around;
+        width: 20em;
+    }
 
     .content_subtitle {
         font-size: 0.9em;
@@ -49,9 +62,8 @@
     }
 
     .t_button > div {
-padding:0;
-
-margin:0;
+        padding:0;
+        margin:0;
     }
 
     .t_button button{
@@ -109,7 +121,7 @@ margin:0;
 
     .t_button > div > button {
         margin: 10px;
-         height: 55px;
+        height: 55px;
         width: 100%;
         
     }
@@ -145,6 +157,10 @@ margin:0;
         height: 100%;
     }
 
+    #pyramiding_title {
+        width: 40em;
+    }
+
     /* #additional-option > div > button:hover{
         padding: 0;
         display: inline-block;
@@ -171,6 +187,7 @@ margin:0;
         justify-content: center;
         text-align: center;
         width: 100%;
+        font-size: 12px;
     }
 
     .content_title > ul {

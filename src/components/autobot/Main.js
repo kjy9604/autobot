@@ -14,7 +14,7 @@ class Main extends React.Component {
 			<section className="move">
 				<div className="content">
 					<div className="main_content">
-						<div className="line_1" style={{flexDirection: "row"}}>
+						<div className="line_1" id="line_1">
 							<div className="content_title">
 								<div>가동코인 Set</div>
 							</div>
@@ -23,7 +23,7 @@ class Main extends React.Component {
 									<div>/</div>
 									<div>BTC</div>
 							</div>
-							<div className="button_container">
+							<div id="autobot_button_container1" className="button_container">
 								<Link to="/autobot/pyramiding"><button className="main_button" style={{margin: "10px"}}>로봇결재, 사용방법</button></Link>
 								<button className="main_button">거래소 바로가기</button>
 							</div>
@@ -46,13 +46,13 @@ class Main extends React.Component {
 							<div className="content_title">
 								<div>주문설정</div>
 							</div>
-							<div>
+							<div id="autobot_button_container2">
 								<Link to="autobot/test"><button className="main_button" style={{margin: "10px"}}>테스트</button></Link>
 								<Link to="autobot/setting"><button className="main_button">고급설정</button></Link>
 							</div>
 						</div>
 						<div class="horizon_line"></div>
-						<div>
+						<div className="line_2">
 							<ul>
 								<li><a>공격적 </a></li>
 								<li>|</li>
@@ -70,14 +70,14 @@ class Main extends React.Component {
 							</div>
 						</div>
 						<div>
-							<div className="red_text">
+							<div className="red_text content_title">
 								<div>이번달 수익률</div>
 							</div>
-							<div className="red_text">
+							<div className="red_text b_text">
 								7.7%
 							</div>
 						</div>
-						<div>
+						<div className="input_container">
 							<div className="content_title">
 								<div>자동매매 실행금액</div>
 							</div>
@@ -88,10 +88,10 @@ class Main extends React.Component {
 							</div>
 						</div>
 						<div className="s_button">
-							<div className="content_title">
+							<div id="autosale_margin_div" className="content_title">
 								<div></div>
 							</div>
-							<div className="autosale_buttons">
+							<div id="autosale_buttons" className="autosale_buttons">
 								<button>10%</button>
 								<button>25%</button>
 								<button>50%</button>
@@ -99,7 +99,7 @@ class Main extends React.Component {
 								<button>최대</button>
 							</div>
 						</div>
-						<div>
+						<div className="input_container">
 							<div className="content_title">
 								<div>매매자동종료가격</div>
 							</div>
@@ -135,7 +135,7 @@ class Main extends React.Component {
 								</div>
 							</div>
 						</div>
-						<div >
+						<div className="input_container">
 							<div className="content_title">
 								<div>최고가</div>
 							</div>
@@ -145,7 +145,7 @@ class Main extends React.Component {
 								<input type="button" name="name" value="+" />
 							</div>
 						</div>
-						<div >
+						<div className="input_container">
 							<div className="content_title">
 								<div>최저가</div>
 							</div>
@@ -155,7 +155,7 @@ class Main extends React.Component {
 								<input type="button" name="name" value="+" />
 							</div>
 						</div>
-						<div >
+						<div className="input_container">
 							<div className="content_title">
 								<div>주문수</div>
 							</div>

@@ -99,12 +99,13 @@
     .head_title {
         background-color: rgba(0,0,0,0.9);
         height: 30vh;
-        width: 100%;
+        /* width: 100%; */
         display: flex;
         align-items: center;
         justify-content: center;
         margin-bottom: 2vh;
         flex-direction: column;
+        padding-left: 3em;
     }
 
     .head_title div{

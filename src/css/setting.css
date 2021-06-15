@@ -36,10 +36,9 @@
     #save_buttons {
         display: flex;
         align-items: center;
-    justify-content: flex-start;
-    width: 100%;
-    padding-top: 20px;
-
+        justify-content: flex-start;
+        width: 100%;
+        padding-top: 20px;
     }
 
     /* .s_button button:hover{
@@ -51,7 +50,7 @@
     #setting_options {
         padding-top: 10px;
         padding-left: 10px;
-        margin: 10px 10px 0 0;
+        margin: 0px 8px 0 0;
         width:50em;
         font-size:12px;
     }

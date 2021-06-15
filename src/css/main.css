@@ -36,6 +36,19 @@
         margin-left: 10px;
     } */
 
+    #autobot_button_container1 {
+        justify-content: center;
+    }
+
+    .line_2 > ul {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .line_2 > ul > li {
+        margin: 0 5px;
+    }
+
     .s_text > div{
         align-items: center;
         justify-content: center;
@@ -53,6 +66,14 @@
 
     .button_container > button, .button_container > a > button {
         width: 130px;
+    }
+
+    .input_container {
+        flex-direction: column;
+    }
+
+    .input_container > div > input[type="text"] {
+        width: 100%;
     }
 
     .horizon_line {
@@ -134,6 +155,14 @@
         background-color: #bddaff;
     }
 
+    .box_blue > div {
+        margin-right: 0;
+    }
+
+    .box_blue > div, .box_red > div {
+        width: 120px;
+    }
+
     .box_2{
         all: unset;
         display: flex;
@@ -146,13 +175,21 @@
         flex-direction: row;
     }
 
-    .autosale_buttons {
-        max-width: 400px;
+    .b_text {
+        margin-bottom: 10px;
+    }
+
+    #autosale_margin_div {
+        display: none;
+    }
+
+    #autosale_buttons {
+        width: 80%;
         margin-right: 80px;
         height: 100%
     }
 
-    .autosale_buttons > button {
+    #autosale_buttons > button {
         position:relative;
         /*padding:0 2em;*/
         outline:none;
@@ -188,6 +225,10 @@
         margin: 0px;
     }
 
+    #line_1 {
+        flex-direction: row;
+    }
+
     .line_1 {
         display: flex;
         flex-direction: row;
@@ -213,6 +254,14 @@
         align-items: center;
         justify-content: center;
         padding-top: 0px;
+    }
+
+    #autobot_button_container2 {
+        justify-content: flex-end;
+    }
+
+    #autobot_button_container2 > a > button {
+        width: 130px;
     }
 
     .button_container {
