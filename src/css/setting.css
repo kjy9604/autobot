@@ -3,14 +3,20 @@
     .setting_box{
         display: flex;
         flex-direction: column;
+        padding-top:0 !important;
     }
 
     #load_button {
-        width: 120px;
+        width: 90%;
     }
 
     .setting_box div div button{
         margin-left: 10px;
+    }
+
+    .setting_box .t_button {
+        margin:20px 0 0 0px;
+        padding-top:10px;
     }
 
     .main_button{
@@ -22,8 +28,18 @@
     }
 
     .s_button button{
-        height: 50px;
+        height: 74px;
         width: 150px;
+        font-size: 12px;
+        margin:0 10px;
+    }
+    #save_buttons {
+        display: flex;
+        align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding-top: 20px;
+
     }
 
     /* .s_button button:hover{
@@ -33,21 +49,30 @@
 
 
     #setting_options {
-        padding-top: 20px;
-        margin: 0px;
+        padding-top: 10px;
+        padding-left: 10px;
+        margin: 10px 10px 0 0;
+        width:50em;
+        font-size:12px;
     }
 
     #section_setting_button {
         width: 120px;
-        margin: 0px 3px 0px 0px;
+        margin: 0px 3px 0px 10px;
+
     }
 
-    #pyramiding_buttons {
-        justify-content: space-between;
+    .setting_button {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+
 
     #save_buttons > button {
-        width: 120px;
+        width: 50%;
     }
 
 }

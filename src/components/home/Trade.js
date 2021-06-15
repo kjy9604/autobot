@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 function Trade () {
     return (
         <section className="section6">
@@ -11,9 +13,9 @@ function Trade () {
                     </a>
                 </div>
                 <div className="button-column">
-                    <a href="#">
+                    <Link to="/autobot">
                         <button className="trade-btn2">거래 시작하기</button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

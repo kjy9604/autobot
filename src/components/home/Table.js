@@ -3,7 +3,7 @@ import '../../css/home.css';
 function Table () {
     return (
         <section className="section3">
-            <div className="tableDiv">
+            <div id="tableDiv">
                 <table>
                     <thead>
                         <tr>

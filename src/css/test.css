@@ -2,7 +2,7 @@
 
 @media (min-width: 360px) and (max-width: 759px) {
     .content_container {
-        padding-bottom: 20px;
+        padding:10px 0;
         border-bottom: 2px solid #4374D9;
     }
 
@@ -14,31 +14,44 @@
 
     .content_title > div {
         padding-top: 0px;
-        font-size: 1.2em;
+        font-size: 22px;
     }
 
     .content_title > button {
-        width: 200px;
+        width: 235px;
     }
+
+    
 
     .content_subtitle {
         font-size: 0.9em;
+        padding:0;
+        width:30em;
     }
 
     .line_1{
         display: flex;
         flex-direction: column;
-        margin-top: -30px;
+        margin-top: 0px;
     }
 
     .t_button{
         padding-top: 10px;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
         border-bottom: 2px solid #4374D9;
+        height: 49px;
+        width: 93%;
+        padding-right:0;
+        display: flex;
+        padding:20px 0;
+        margin:20px 0 0 10px;
+        justify-content: center;
     }
 
     .t_button > div {
-        padding-top: 5px;
+padding:0;
+
+margin:0;
     }
 
     .t_button button{
@@ -54,7 +67,7 @@
         border: solid 1px;
         text-align: center;
         text-decoration: none;
-        font-size: 11px;
+        font-size: 10px;
         cursor: pointer;
     }
 
@@ -89,13 +102,16 @@
     }
 
     .main_button{
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
+
+
     .t_button > div > button {
-        margin-left: 20%;
-        /* height: 60px;
-        width: 150px; */
+        margin: 10px;
+         height: 55px;
+        width: 100%;
+        
     }
 
     .t_button > div > button > input[type="text"] {
@@ -117,17 +133,15 @@
         width:100%;
         height:11vh;
         padding-top: 0;
+        margin:20px 0 0 0;
     }
 
     #additional-option > div {
         width:25%;
-        padding-top: 0;
         height: 100%;
     }
 
     #additional-option > div > button {
-        margin-left: 5px;
-        margin-right: 5px;
         height: 100%;
     }
 
@@ -162,7 +176,7 @@
     .content_title > ul {
         display: flex;
         justify-content: center;
-        width: 100%;
+        width: 97%;
         max-width: 760px;
         padding: 0px 5px;
     }
