@@ -7,7 +7,7 @@ function Contact() {
             <div className="image-area">
                 <div className="image-column">
                     <div className="image-row">
-                        <img src="https://dk-enter.com/wp-content/plugins/elementor/assets/images/placeholder.png" title="" alt="" />
+                        <img src="/img/placeholder.png" title="" alt="" />
                     </div>
                     <div className="image-name">
                         <h2>24/7 고객지원</h2>
@@ -18,7 +18,7 @@ function Contact() {
                 </div>
                 <div className="image-column">
                     <div className="image-row">
-                        <img src="https://dk-enter.com/wp-content/plugins/elementor/assets/images/placeholder.png" title="" alt="" />
+                        <img src="/img/placeholder.png" title="" alt="" />
                     </div>
                     <div className="image-name">
                         <h2>바이낸스 블로그</h2>
@@ -29,7 +29,7 @@ function Contact() {
                 </div>
                 <div className="image-column">
                     <div className="image-row">
-                        <img src="https://dk-enter.com/wp-content/plugins/elementor/assets/images/placeholder.png" title="" alt="" />
+                        <img src="/img/placeholder.png" title="" alt="" />
                     </div>
                     <div className="image-name">
                         <h2>커뮤니티</h2>
@@ -40,7 +40,7 @@ function Contact() {
                 </div>
                 <div className="image-column">
                     <div className="image-row">
-                        <img src="https://dk-enter.com/wp-content/plugins/elementor/assets/images/placeholder.png" title="" alt="" />
+                        <img src="/img/placeholder.png" title="" alt="" />
                     </div>
                     <div className="image-name">
                         <h2>24/7 고객지원</h2>

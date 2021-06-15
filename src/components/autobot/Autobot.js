@@ -15,7 +15,7 @@ class Autobot extends React.Component {
                     <div className="line_1">
                         <div className="content_title">오토로봇 프로세스 메뉴</div>
                         <div className="button_container">
-                            <div class="tooltip">
+                            <div className="tooltip">
                                 <button className="main_button help_tip">
                                     <a>로봇결제방법</a>
                                 </button>
@@ -31,51 +31,49 @@ class Autobot extends React.Component {
                             <button className="main_button" id="autosale_append">자동연장결재</button>
                         </div>
                     </div>
-                    <form>
+                    <div>
                         <div>
-                            <div>
-                                <table className="m_text">
-                                    <thead>
-                                        <tr>
-                                            <th>선택</th>
-                                            <th>로봇설정요금(월)</th>
-                                            <th>1로봇</th>
-                                            <th>2로봇</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="checkbox" value="5000"/></td>
-                                            <td>5000$ 이하</td>
-                                            <td>30$</td>
-                                            <td>54$</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" value="10000"/></td>
-                                            <td>10000$ 이하</td>
-                                            <td>50$</td>
-                                            <td>90$</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" value="30000"/></td>
-                                            <td>30000$ 이하</td>
-                                            <td>80$</td>
-                                            <td>144$</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" value="30000"/></td>
-                                            <td>30000$ 이하</td>
-                                            <td>100$</td>
-                                            <td>180$</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
+                            <table className="m_text">
+                                <thead>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>로봇설정요금(월)</th>
+                                        <th>1로봇</th>
+                                        <th>2로봇</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="checkbox" value="5000"/></td>
+                                        <td>5000$ 이하</td>
+                                        <td>30$</td>
+                                        <td>54$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="10000"/></td>
+                                        <td>10000$ 이하</td>
+                                        <td>50$</td>
+                                        <td>90$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="30000"/></td>
+                                        <td>30000$ 이하</td>
+                                        <td>80$</td>
+                                        <td>144$</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input type="checkbox" value="30000"/></td>
+                                        <td>30000$ 이하</td>
+                                        <td>100$</td>
+                                        <td>180$</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div className="line_4">
-                            <div className="pyramiding-checkbox"  id="pyramiding-div">피라미딩 세팅 <input type="checkbox" name="pyramiding" /></div>
-                        </div>
-                    </form>
+                    </div>
+                    <div className="line_4">
+                        <div className="pyramiding-checkbox"  id="pyramiding-div">피라미딩 세팅 <input type="checkbox" name="pyramiding" /></div>
+                    </div>
                 </div>
             </div>
         )

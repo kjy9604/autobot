@@ -7,7 +7,7 @@ function Table () {
                 <table>
                     <thead>
                         <tr>
-                            <th colspan="3">이름</th>
+                            <th colSpan="3">이름</th>
                             <th>마지막 체결가</th>
                             <th>전일대비</th>
                             <th>마켓</th>

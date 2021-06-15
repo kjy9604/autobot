@@ -15,7 +15,7 @@ function Showcase () {
                 <div className="content-container">
                     <div className="showcase-image">
                         <img width="400" height="300" 
-                            src="https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-1024x702.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-1024x702.png 1024w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-300x206.png 300w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06-768x526.png 768w, https://dk-enter.com/wp-content/uploads/2021/05/스크린샷-2021-06-01-오전-3.24.06.png 1208w"
+                            src="/img/homeAppImage.png" className="attachment-large size-large" alt="Autobot 앱 이미지" loading="lazy" srcSet="/img/homeAppImage.png 1024w, /img/homeAppImage.png 300w, /img/homeAppImage.png 768w, /img/homeAppImage.png 1208w"
                             sizes="(max-width: 1024px) 100vw, 1024px" />
                     </div>
                     <div className="showcase-content-area">
@@ -29,7 +29,7 @@ function Showcase () {
                         </div>
                         <div className="download-area">
                             <div className="QR-image">
-                                <img src="https://dk-enter.com/wp-content/uploads/elementor/thumbs/-2021-06-01-오전-2.05.33-p7ziuqcgdfsawp946wxwmwaedk3kdfhuts0zo9hi2g.png" title="스크린샷 2021-06-01 오전 2.05.33" alt="스크린샷 2021-06-01 오전 2.05.33" />
+                                <img src="/img/homeAppQR.png" title="Autobot QR코드" alt="Autobot QR코드" />
                             </div>
                             <div className="QR-content">
                                 <div>
@@ -44,7 +44,7 @@ function Showcase () {
                             <div>
                                 <div className="icon-area">
                                     <a href="#">
-                                        <i class="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
                                     </a>
                                 </div>
                                 <div className="content-area">
@@ -56,7 +56,7 @@ function Showcase () {
                             <div>
                                 <div className="icon-area">
                                     <a href="#">
-                                        <i class="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
                                     </a>
                                 </div>
                                 <div className="content-area">

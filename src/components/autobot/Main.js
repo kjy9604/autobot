@@ -28,7 +28,7 @@ class Main extends React.Component {
 								<button className="main_button">거래소 바로가기</button>
 							</div>
 						</div>
-						<div class="horizon_line"></div>
+						<div className="horizon_line"></div>
 						<div className="line_2">
 							<ul>
 								<li><a>초기화 </a></li>
@@ -51,7 +51,7 @@ class Main extends React.Component {
 								<Link to="autobot/setting"><button className="main_button">고급설정</button></Link>
 							</div>
 						</div>
-						<div class="horizon_line"></div>
+						<div className="horizon_line"></div>
 						<div className="line_2">
 							<ul>
 								<li><a>공격적 </a></li>
