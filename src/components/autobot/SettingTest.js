@@ -15,7 +15,26 @@ class SettingTest extends React.Component {
     
     testButton() {
 
-        const url = `http://localhost:3000/test`;
+        const url = `http://localhost:3000/test`; // 임시주소
+        
+        // 구간별 자금
+        const firstAmount = document.querySelector("#first_section_amount").value *= 1;
+        const secondAmount = document.querySelector("#second_section_amount").value *= 1;
+        const thirdAmount = document.querySelector("#third_section_amount").value *= 1;
+
+        // 진입회수
+        const firstEntry = document.querySelector("#first_section_entry").value *= 1;
+        const secondEntry = document.querySelector("#second_section_entry").value *= 1;
+        const thirdEntry = document.querySelector("#third_section_entry").value *= 1;
+
+
+
+        // let totalAmount = (document.querySelector("#total_amount").value).toString();
+        let totalAmount = (firstAmount + secondAmount + thirdAmount).toString();
+        let totalEntry = (firstEntry + secondEntry + thirdEntry).toString();
+        let pyramiding = document.querySelector("input[name='pyramiding']").checked ? "True" : "False"
+        console.log(totalAmount)
+
         axios.post(url, {
             Headers: {
                 Accept: "application/json",
@@ -23,14 +42,15 @@ class SettingTest extends React.Component {
                 AccessControlAllowOrigin: "*"
             },
             params: {
-                TimePeriod: "2021-06-20-2021-06-30",
-                UpPyramiding: "True",
-                StartingAmount: "5000",
+                TimePeriod: "2012-01-01-2013-05-25",
+                UpPyramiding: pyramiding,
+                StartingAmount: totalAmount,
                 PercentRange: "30.5",
-                EntryNum: "10",
+                EntryNum: totalEntry,
                 PercentReturn: "2.5"
             },
         }).then((response) => {
+            // 그래프 밑 5개항목 부분에 채우는건가?
             console.log(response);
         }).catch((error) => {
             console.log(error);
@@ -53,7 +73,7 @@ class SettingTest extends React.Component {
                             <div>테스트 기간 설정</div>
                         </div>
                         <ul id="test_subtitle_button" className="content_subtitle">
-                            <li><a>운용자금 1000$ </a></li>
+                            <li><a>운용자금 <input type="text" id="total_amount" name="total_amount" />$ </a></li>
                             <li>|</li>
                             <li><a>수수료 설정 </a></li>
                         </ul>
@@ -66,20 +86,20 @@ class SettingTest extends React.Component {
                     <div className="line_1" style={{flexDirection: "column"}}>
                         <div className="t_button" style={{margin: 0}}>
                             <div><button>1구간<br/><input type="text" /> %</button></div>
-                            <div><button>1구간<br/><input type="text" /> $</button></div>
-                            <div><button>1구간 진입횟수<br/><input type="text" /> </button></div>
+                            <div><button>1구간<br/><input type="text" id="first_section_amount" /> $</button></div>
+                            <div><button>1구간 진입횟수<br/><input type="text" id="first_section_entry" /> </button></div>
                             <div><button>1구간 이익<br/><input type="text" /> %</button></div>
                         </div>
                         <div className="t_button" style={{margin: 0}}>
                             <div><button>2구간<br/><input type="text" /> %</button></div>
-                            <div><button>2구간<br/><input type="text" /> $</button></div>
-                            <div><button>2구간 진입횟수<br/><input type="text" /> </button></div>
+                            <div><button>2구간<br/><input type="text" id="second_section_amount" /> $</button></div>
+                            <div><button>2구간 진입횟수<br/><input type="text" id="second_section_entry" /> </button></div>
                             <div><button>2구간 이익<br/><input type="text" /> %</button></div>
                         </div>
                         <div className="t_button" style={{margin: 0}}>
                             <div><button>3구간<br/><input type="text" /> %</button></div>
-                            <div><button>3구간<br/><input type="text" /> $</button></div>
-                            <div><button>3구간 진입횟수<br/><input type="text" /> </button></div>
+                            <div><button>3구간<br/><input type="text" id="third_section_amount" /> $</button></div>
+                            <div><button>3구간 진입횟수<br/><input type="text" id="third_section_entry" /> </button></div>
                             <div><button>3구간 이익<br/><input type="text" /> %</button></div>
                         </div>
                     </div>
