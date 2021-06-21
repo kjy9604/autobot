@@ -15,6 +15,8 @@ class SettingTest extends React.Component {
     
     testButton() {
 
+        // API는 기입된 구간까지(2구간까지 했으면 2번) 요청함.
+
         const url = `http://localhost:3000/test`; // 임시주소
         
         // 구간별 자금
@@ -27,7 +29,7 @@ class SettingTest extends React.Component {
         const secondEntry = document.querySelector("#second_section_entry").value *= 1;
         const thirdEntry = document.querySelector("#third_section_entry").value *= 1;
 
-
+        // 구간별 퍼센트
 
         // let totalAmount = (document.querySelector("#total_amount").value).toString();
         let totalAmount = (firstAmount + secondAmount + thirdAmount).toString();
@@ -50,7 +52,9 @@ class SettingTest extends React.Component {
                 PercentReturn: "2.5"
             },
         }).then((response) => {
-            // 그래프 밑 5개항목 부분에 채우는건가?
+            // 그래프 밑 5개항목 부분에 채우는거.
+
+            // PV ~ AnnReturns 까지 왼쪽부터 값 채움
             console.log(response);
         }).catch((error) => {
             console.log(error);
@@ -85,19 +89,19 @@ class SettingTest extends React.Component {
                     </div>
                     <div className="line_1" style={{flexDirection: "column"}}>
                         <div className="t_button" style={{margin: 0}}>
-                            <div><button>1구간<br/><input type="text" /> %</button></div>
+                            <div><button>1구간<br/><input type="text" id="first_section_range" /> %</button></div>
                             <div><button>1구간<br/><input type="text" id="first_section_amount" /> $</button></div>
                             <div><button>1구간 진입횟수<br/><input type="text" id="first_section_entry" /> </button></div>
                             <div><button>1구간 이익<br/><input type="text" /> %</button></div>
                         </div>
                         <div className="t_button" style={{margin: 0}}>
-                            <div><button>2구간<br/><input type="text" /> %</button></div>
+                            <div><button>2구간<br/><input type="text" id="second_section_range" /> %</button></div>
                             <div><button>2구간<br/><input type="text" id="second_section_amount" /> $</button></div>
                             <div><button>2구간 진입횟수<br/><input type="text" id="second_section_entry" /> </button></div>
                             <div><button>2구간 이익<br/><input type="text" /> %</button></div>
                         </div>
                         <div className="t_button" style={{margin: 0}}>
-                            <div><button>3구간<br/><input type="text" /> %</button></div>
+                            <div><button>3구간<br/><input type="text" id="third_section_range" /> %</button></div>
                             <div><button>3구간<br/><input type="text" id="third_section_amount" /> $</button></div>
                             <div><button>3구간 진입횟수<br/><input type="text" id="third_section_entry" /> </button></div>
                             <div><button>3구간 이익<br/><input type="text" /> %</button></div>
