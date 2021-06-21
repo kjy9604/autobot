@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../css/test.css';
+import axios from 'axios';
 
 class SettingTest extends React.Component {
 
@@ -7,6 +8,35 @@ class SettingTest extends React.Component {
         window.scrollTo(0, 0);
     }
 
+    constructor(props) {
+        super(props);
+        this.testButton = this.testButton.bind(this);
+    }
+    
+    testButton() {
+
+        const url = `http://localhost:3000/test`;
+        axios.post(url, {
+            Headers: {
+                Accept: "application/json",
+                ContentType: "applycation/json",
+                AccessControlAllowOrigin: "*"
+            },
+            params: {
+                TimePeriod: "2021-06-20-2021-06-30",
+                UpPyramiding: "True",
+                StartingAmount: "5000",
+                PercentRange: "30.5",
+                EntryNum: "10",
+                PercentReturn: "2.5"
+            },
+        }).then((response) => {
+            console.log(response);
+        }).catch((error) => {
+            console.log(error);
+        })
+        
+    }
     render() {
         return (
             <div className="content">
@@ -27,7 +57,7 @@ class SettingTest extends React.Component {
                             <li>|</li>
                             <li><a>수수료 설정 </a></li>
                         </ul>
-                        <button className="main_button">시작</button>
+                        <button className="main_button" onClick={this.testButton}>시작</button>
                     </div>
                     <div>
                         <button className="main_button">3개씩 매도</button>
