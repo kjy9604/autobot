@@ -99,7 +99,7 @@
         height: 30vh;
     }
 
-    .t_button > div > button > input[type="text"]{
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
         width: 50px;
         height:100%;
 
@@ -130,7 +130,7 @@
         
     }
 
-    .t_button > div > button > input[type="text"] {
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
         height: auto;
     }
 
@@ -296,7 +296,7 @@
         height: 30vh;
     }
 
-    .t_button > div > button > input[type="text"]{
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"]{
         width: 50px;
         height:100%;
 
@@ -324,7 +324,7 @@
         width: 150px;
     }
 
-    .t_button > div > button > input[type="text"] {
+    .t_button > div > button > input[type="text"], .t_button > div > button > input[type="number"] {
         height: auto;
     }
 
