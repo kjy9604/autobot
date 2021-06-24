@@ -50,7 +50,7 @@
     .section3 {
         max-width: 760px;
         position: relative;
-        margin: 0px auto;
+        margin: 5px 10px;
         height: 250px;
     }
 
@@ -478,7 +478,7 @@
     .section3 {
         max-width: 760px;
         position: relative;
-        margin: 0px auto;
+        margin: 5px auto;
         height: 371px;
     }
 

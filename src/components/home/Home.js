@@ -1,3 +1,4 @@
+import Ticker from './Ticker';
 import ImageSwiper from './ImageSwiper';
 import Notice from './Notice';
 import Table from './Table';
@@ -9,6 +10,7 @@ import '../../css/basic.css';
 function home() {
     return (
         <section>
+            <Ticker />
             <ImageSwiper />
             <Notice />
             <Table />
