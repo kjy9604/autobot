@@ -63,9 +63,9 @@ class Ticker extends React.Component {
 	render() {
 		return (
 			<section className="section3" style={{height: "auto"}}>
-				<div style={{marginBottom: 15}} id="ticker_widget_container" class="tradingview-widget-container">
-				<div class="tradingview-widget-container__widget"></div>
-				{/* <div class="tradingview-widget-copyright">TradingView 제공 <a href="https://kr.tradingview.com" rel="noopener" target="_blank"><span class="blue-text">쿼트</span></a></div> */}
+				<div style={{marginBottom: 15}} id="ticker_widget_container" className="tradingview-widget-container">
+				<div className="tradingview-widget-container__widget"></div>
+				{/* <div className="tradingview-widget-copyright">TradingView 제공 <a href="https://kr.tradingview.com" rel="noopener" target="_blank"><span className="blue-text">쿼트</span></a></div> */}
 				</div>
 			</section>
 		);

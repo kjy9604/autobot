@@ -90,12 +90,12 @@ class Table extends React.Component {
                 </div> */}
                 <div id="trading_widget_container" className="tradingview-widget-container">
                     <div className="tradingview-widget-container__widget"></div>
-                    <div className="tradingview-widget-copyright">
+                    {/* <div className="tradingview-widget-copyright">
                         TradingView 제공 
                         <a href="https://kr.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank">
                             <span className="blue-text">크립토커런시 마켓</span>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
         );

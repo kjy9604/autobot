@@ -857,4 +857,16 @@
         background-color: rgba(0, 0, 0, 0.9);
     }
 
+    .rolling {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rolling li {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
