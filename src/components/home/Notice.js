@@ -47,9 +47,8 @@ class Notice extends React.Component {
                     title={title}
                     date={date}
                     key={id}
-                />
-            )
-        );
+                />)
+            );
 
         return (
             <section className="section2">

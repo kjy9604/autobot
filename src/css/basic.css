@@ -32,7 +32,8 @@
 
     /* header */
     .header {
-        background-color: black;
+        border-bottom: 1px solid #000000;
+        background-color: #FFFFFF;
     }
 
     /*=================================*/
@@ -368,7 +369,8 @@
 
     /* header */
     .header {
-        background-color: black;
+        border-bottom: 1px solid #000000;
+        background-color: #ffffff;
     }
 
     /*=================================*/
@@ -376,7 +378,7 @@
     /*=================================*/
 
     .navbar a {
-        color: white;
+        color: #000000;
     }
 
     .navbar{
@@ -385,12 +387,12 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: black;
+        background-color: #FFFFFF;
         /* padding: 8px 12px; */
         padding-top: 8px;
         padding-bottom: 8px;
         height: 50px;
-        color: white;
+        color: #000000;
         margin: 0px auto;
         position: relative;
     }

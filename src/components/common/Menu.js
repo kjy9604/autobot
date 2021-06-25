@@ -4,7 +4,7 @@ function Menu() {
     return (
         <nav className="navbar">
             <div className="nav_logo">
-                <i className="fas fa-bahai"></i><Link to="/">AutoMain</Link>
+                <i className="fas fa-bahai"></i><Link to="/"><img src="/img/logo.png"/>&nbsp;AutoMain</Link>
             </div>
             <ul className="nav_menu">
                 <li><Link to="#">MTOP</Link><div> |</div></li>
