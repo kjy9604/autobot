@@ -12,6 +12,7 @@
 
     .notice {
         display: flex;
+        overflow: hidden;
         flex-direction: row;
         width: 100%;
         align-items: center;
@@ -455,6 +456,13 @@
         max-width: 760px;
         position: relative;
         margin: 0px auto;
+        height: 50px;
+    }
+
+    .notice {
+        margin: 0px 15px;
+        height: 50px;
+        overflow: hidden;
     }
 
     .notice > div {
@@ -462,7 +470,7 @@
         padding: 1em;
     }
 
-    .notice > div > * {
+    .notice > div > * , .notice > ul > *{
         font-size: 1.5rem;
     }
 
@@ -859,14 +867,19 @@
 
     .rolling {
         display: flex;
+        position: relative;
+        height: auto;
         flex-direction: column;
     }
 
     .rolling li {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
+        height: 50px;
+        line-height: 50px;
+        width: 100%;
     }
 
 }
