@@ -425,4 +425,9 @@
     .in-line > input[type="button"]:nth-child(3) {
         border-radius: 0px 10px 10px 0px;
     }
+
+    #trading_widget_container * {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }

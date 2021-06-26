@@ -3,6 +3,7 @@ import '../../css/test.css';
 import axios from 'axios';
 
 import Title from '../common/Title';
+import TradingViewWidget from 'react-tradingview-widget';
 import { hidden } from 'jest-matcher-utils/node_modules/chalk';
 
 class SettingTest extends React.Component {
@@ -10,35 +11,35 @@ class SettingTest extends React.Component {
     componentDidMount() {
         window.scrollTo(0, 0);
 
-        const script1 = document.createElement("script");
+        // const script1 = document.createElement("script");
 
-        script1.type = "text/javascript";
-        script1.src = "https://s3.tradingview.com/tv.js";
+        // script1.type = "text/javascript";
+        // script1.src = "https://s3.tradingview.com/tv.js";
 
-        document.querySelector("#trading_widget_container").appendChild(script1);
+        // document.querySelector("#trading_widget_container").appendChild(script1);
 
-        const script2 = document.createElement("script");
-        script2.type = "text/javascript";
+        // const script2 = document.createElement("script");
+        // script2.type = "text/javascript";
         // script.src = "https://s3.tradingview.com/tv.js";
         // script2.async = true;
-        script2.text = `
-        new TradingView.widget(
-            {
-                "autosize": true,
-                "symbol": "BITSTAMP:BTCUSD",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "light",
-                "style": "1",
-                "locale": "kr",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_bbab8"
-            }
-        );`;
-
-        document.querySelector("#trading_widget_container").appendChild(script2);
+        // script2.text = `
+        // new TradingView.widget(
+        //     {
+        //         "autosize": true,
+        //         "symbol": "BITSTAMP:BTCUSD",
+        //         "interval": "D",
+        //         "timezone": "Etc/UTC",
+        //         "theme": "light",
+        //         "style": "1",
+        //         "locale": "kr",
+        //         "toolbar_bg": "#f1f3f6",
+        //         "enable_publishing": false,
+        //         "allow_symbol_change": true,
+        //         "container_id": "tradingview_bbab8"
+        //     }
+        // );`;
+        
+        // document.querySelector("#trading_widget_container").appendChild(script2);
         
     }
 
@@ -284,12 +285,13 @@ class SettingTest extends React.Component {
                             <button>구간 추가</button>
                         </div>
                         <div id="trading_widget_container" className="img_div">
-                            <div className="tradingview-widget-container" ref={this._ref}>
-                            <div id="tradingview_bbab8"></div>
+                            {/* <div className="tradingview-widget-container" ref={this._ref}>
+                            <div id="tradingview_bbab8"></div> */}
                             {/* <div class="tradingview-widget-copyright">TradingView 제공 <a href="https://kr.tradingview.com/symbols/BTCUSD/?exchange=BITSTAMP" rel="noopener" target="_blank"><span class="blue-text">BTCUSD 차트</span></a></div> */}
-                            </div>
-                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                            {/* </div>
+                            <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> */}
                             {/* <img src="/img/graph.png"/> */}
+                            <TradingViewWidget symbol="BITSTAMP:BTCUSD" />
                         </div>
                         <div class="result_container_wrapper">
                             <div class="result_container">

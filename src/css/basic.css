@@ -421,7 +421,11 @@
         padding-left: 0;
         font-size: 15px;
         cursor:pointer;
-        
+        font-weight: 600;
+    }
+
+    .nav_menu li:nth-child(even) {
+        padding: 8px 0;
     }
 
     .nav_menu li div{
@@ -436,6 +440,31 @@
     .nav_menu li a:hover{
         font-weight: bold;
         color: coral;
+    }
+
+    .dropdown {
+        display: block;
+        width: 100%;
+        background-color: #F8F8F8;
+        position: absolute;
+        left: 0px;
+        top: 67px;
+    }
+    
+    .dropdown_content {
+        display: none;
+        max-width: 760px;
+        position: absolute;
+        margin-top: 67px;
+        padding: 8px;
+        z-index: 9999;
+        font-size: 15px;
+        font-weight: 500;
+        text-align: left;
+    }
+
+    .nav_menu:hover {
+        display: block;
     }
 
     /*=================================*/

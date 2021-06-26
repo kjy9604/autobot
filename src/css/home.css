@@ -453,7 +453,40 @@
 @media (min-width: 760px) {
 
     .section0 {
-        background-image: '../../public/img/banner.png';
+        width: 100%;
+        height: 450px;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+    }
+    
+    .banner_container {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+    }
+    
+    .banner_text_container {
+        height: 100%;
+        max-width: 760px;
+        font-weight: 700;
+        color: #FFFFFF;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 185px;
+    }
+
+    #banner_first {
+        font-size: 34px;
+    }
+
+    #banner_second {
+        margin-top: 19px;
+        font-size: 20px;
+    }
+
+    #banner_second > span{
+        color: #FFDC5F;
     }
 
     .section1 {

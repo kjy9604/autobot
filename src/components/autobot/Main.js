@@ -1,11 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import TradingViewWidget from 'react-tradingview-widget';
 import '../../css/main.css';
 
 import Title from '../common/Title';
 
 
-class Main extends React.PureComponent {
+class Main extends React.Component {
 
 	constructor(props) {
         super(props);
@@ -22,28 +23,28 @@ class Main extends React.PureComponent {
 
         // document.querySelector("#trading_widget_container").appendChild(script1);
 
-        const script2 = document.createElement("script");
+        // const script2 = document.createElement("script");
         // script2.type = "text/javascript";
         // script2.src = "https://s3.tradingview.com/tv.js";
-        script2.async = true;
-        script2.innerHTML = `
-        new TradingView.widget(
-            {
-                "autosize": true,
-                "symbol": "BITSTAMP:BTCUSD",
-                "interval": "D",
-                "timezone": "Etc/UTC",
-                "theme": "light",
-                "style": "1",
-                "locale": "kr",
-                "toolbar_bg": "#f1f3f6",
-                "enable_publishing": false,
-                "allow_symbol_change": true,
-                "container_id": "tradingview_bbab8"
-            }
-        );`;
+        // script2.async = true;
+        // script2.innerHTML = `
+        // new TradingView.widget(
+        //     {
+        //         "autosize": true,
+        //         "symbol": "BITSTAMP:BTCUSD",
+        //         "interval": "D",
+        //         "timezone": "Etc/UTC",
+        //         "theme": "light",
+        //         "style": "1",
+        //         "locale": "kr",
+        //         "toolbar_bg": "#f1f3f6",
+        //         "enable_publishing": false,
+        //         "allow_symbol_change": true,
+        //         "container_id": "tradingview_bbab8"
+        //     }
+        // );`;
 
-        this._ref.current.appendChild(script2);
+        // this._ref.current.appendChild(script2);
 
 	}
 	
@@ -102,11 +103,12 @@ class Main extends React.PureComponent {
 								</ul>
 							</div>
 							<div id="trading_widget_container" className="img_div" ref={this._ref}>
-								<div className="tradingview-widget-container">
-								<div id="tradingview_bbab8"></div>
+								{/* <div className="tradingview-widget-container">
+								<div id="tradingview_bbab8"></div> */}
 								{/* <div class="tradingview-widget-copyright">TradingView 제공 <a href="https://kr.tradingview.com/symbols/BTCUSD/?exchange=BITSTAMP" rel="noopener" target="_blank"><span class="blue-text">BTCUSD 차트</span></a></div> */}
-								</div>
-								<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+								{/* </div>
+								<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script> */}
+								<TradingViewWidget symbol="BITSTAMP:BTCUSD" />
 							</div>
 							<div>
 								<div className="content_title">
