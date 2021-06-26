@@ -1,3 +1,4 @@
+import Banner from '../common/Banner';
 import Ticker from './Ticker';
 import ImageSwiper from './ImageSwiper';
 import Notice from './Notice';
@@ -9,15 +10,18 @@ import '../../css/basic.css';
 
 function home() {
     return (
+        <>
+        <Banner />
         <section>
             <Ticker />
-            <ImageSwiper />
+            {/* <ImageSwiper /> */}
             <Notice />
             <Table />
             <Showcase />
-            <Contact />
-            <Trade />
+            {/* <Contact /> */}
+            {/* <Trade /> */}
         </section>
+        </>
     );
 }
 

@@ -1,3 +1,7 @@
+.horizon_line2 {
+    border-bottom: 0.5px solid #000000;
+}
+
 @media (min-width: 360px) and (max-width: 759px) {
     /*=================================*/
     /*공통 설정*/
@@ -265,8 +269,8 @@
         height: 50px;
         width:100%;
         border-radius: 8px;
-        background-color: navy;
-        color:#fff;
+        background-color: #FFC700;
+        color:#000000;
         border: none;
         text-align: center;
         text-decoration: none;
@@ -439,29 +443,54 @@
     /*=================================*/
 
     .head_title {
-        background-color: rgba(0,0,0,0.9);
+        background-color: #FFFFFF;
         height: 30vh;
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 2vh;
+        /* margin-bottom: 2vh; */
         flex-direction: column;
     }
 
-    .head_title div{
+    .head_title > div{
+        margin-left: 30px;
         max-width: 760px;
         width: 100%;
         text-align: left;
-        display: block;
-        /* vertical-align: middle; */
-        font-size: 4.5rem;
+        display: flex;
         font-weight: bold;
-        color: white;
+        color: black;
+        align-items: center;
+        height: auto;
     }
-
+    
     .head_title > div > p {
         margin-bottom: 45px;
+    }
+
+    .title_container > div {
+        text-align: left;
+        height: auto;
+    }
+
+    .title_container div p {
+        margin: 0 0 0 0;
+    }
+    
+    .title_container > div:nth-child(1) {
+        padding-left: 24px;
+        border-left: 6px solid #FFC700;
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .title_container > div:nth-child(2) {
+        padding-left: 22px;
+        border-left: 2px solid #FFC700;
+        margin-left: 31px;
+        font-size: 20px;
+        font-weight: 700;
     }
 
     /*=================================*/
@@ -501,12 +530,14 @@
     }
 
     .s_text{
-        font-size: 1.3rem;
+        font-size: 15px;
+        font-weight: 500;
     }
 
     .b_text{
         font-size: 2rem;
         font-weight: bold;
+        justify-content: flex-end;
     }
 
     .red_text{
@@ -519,6 +550,11 @@
         color: blue;
     }
 
+    .vertical_line {
+        color: #FFC700;
+        font-weight: 600;
+    }
+
 
     /*=================================*/
     /*button 설정*/
@@ -529,14 +565,15 @@
         /*padding:0 2em;*/
         outline:none;
         height: 40px;
-        width: 100px;
+        width: 120px;
         border:none;
         border-radius: 8px;
         /*border: 2px solid navy;*/
         /*color:black;*/
-        background-color: #4374D9;
-        color:#fff;
-        font-size:1.3rem;
+        background-color: #FFC700;
+        color:#000000;
+        font-size:14px;
+        font-weight: 600;
         cursor:pointer;
         transition:800ms ease all;
     }
@@ -551,25 +588,26 @@
     /*s_button 설정*/
     /*=================================*/
 
-    .s_button{
+    /* .s_button{
         margin-top: -30px;
-    }
+    } */
 
     .s_button button {
         margin: 4px;
         padding: 0;
         display: inline-block;
-        height: 30px;
-        width:50px;
+        height: 40px;
+        width: 120px;
         border-radius: 8px;
-        background-color: #b2b2b2;
-        color:#fff;
+        background-color: #FFC700;
+        color: black;
         border: none;
         text-align: center;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 14px;
         cursor: pointer;
-        transition:800ms ease all;
+        font-weight: 600;
+        /* transition:800ms ease all; */
     }
 
     /* .s_button button:hover{
@@ -599,12 +637,13 @@
         height: 50px;
         width:100%;
         border-radius: 8px;
-        background-color: navy;
-        color:#fff;
+        background-color: #FFC700;
+        color:#000000;
         border: none;
         text-align: center;
         text-decoration: none;
-        font-size: 15px;
+        font-size: 19px;
+        font-weight: 600;
         cursor: pointer;
     }
 
@@ -662,6 +701,7 @@
         display: block;
         width: 100%;
     }
+
 }
 
 

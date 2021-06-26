@@ -9,7 +9,7 @@ class NoticeContent extends React.Component {
 		return (
 			<li>
 				<div>
-					<i className="far fa-circle"></i>
+					<p>[공지사항]</p>
 				</div>
 				<div id="notice_title">
 					<p>{title}</p>
