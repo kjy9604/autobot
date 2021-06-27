@@ -6,6 +6,7 @@ import Title from '../common/Title';
 import TradingViewWidget from 'react-tradingview-widget';
 import { trackPromise } from 'react-promise-tracker';
 import { hidden } from 'jest-matcher-utils/node_modules/chalk';
+import Loader from '../common/Loader';
 
 class SettingTest extends React.Component {
 
@@ -47,13 +48,16 @@ class SettingTest extends React.Component {
     constructor(props) {
         super(props);
         this.testButton = this.testButton.bind(this);
+        this.testIndicator = this.testIndicator.bind(this);
         this.countIncrease = this.countIncrease.bind(this);
         this.countDecrease = this.countDecrease.bind(this);
+        this.showResult = this.showResult.bind(this);
         // this.checkNumber = this.checkNumber.bind(this);
     }
 
     state = {
-        count: 1
+        count: 1,
+        loading: false
     }
 
     countIncrease() {
@@ -61,6 +65,10 @@ class SettingTest extends React.Component {
             this.setState({
                 count: this.state.count + 1
             });
+            console.log(this.state.count);
+            if(this.state.count + 1 == 3) {
+                document.querySelector(".l_button").remove();
+            }
             document.querySelector("#test_section" + (this.state.count + 1)).style.display = "flex";
         } else {
             alert("3구간까지 설정가능합니다.");
@@ -311,12 +319,64 @@ class SettingTest extends React.Component {
         } catch(error) {
             console.log(error);
         }
-            
+
+        
+    }
+
+    testIndicator() {
+        document.querySelector(".result_container_wrapper").innerHTML = "";
+        this.state.loading = true;
+
+        if(this.state.loading) {
+            document.querySelector(".contentWrap").firstChild.style.display = "block";
+            setTimeout(this.showResult, 60000);
+        };
+    }
+
+    showResult() {
+        for(let i = 0; i < this.state.count; i++) {
+            const div = document.createElement("div");
+                div.className = "result_container";
+                div.innerHTML = `
+                    <div class="result_header">
+                        ` + (i + 1) + ` 구간
+                    </div>
+                    <div class="result_content">
+                        <div>
+                            <div><p>총 누적 수익률</p></div>
+                            <div><p>173.19%</p></div>
+                        </div>
+                        <div>
+                            <div><p>연 환산 수익률</p></div>
+                            <div><p>69.23%</p></div>
+                        </div>
+                        <div>
+                            <div><p>MDD</p></div>
+                            <div><p>4.30%</p></div>
+                        </div>
+                        <div>
+                            <div><p>기간 총 거래횟수</p></div>
+                            <div><p>388회</p></div>
+                        </div>
+                        <div>
+                            <div><p>월 평균 거래 횟수</p></div>
+                            <div><p>13회</p></div>
+                        </div>
+                    </div>`
+                document.querySelector(".result_container_wrapper").appendChild(div);
         }
+
+        this.state.loading = false;
+
+        document.querySelector(".contentWrap").firstChild.style.display = "none";
+
+    }
+
         render() {
             return (
                 <>
                     <Title header="Auto 로봇" subTitle="전략 테스트" />
+                    <Loader type="spin" color="black" message={""} />;
                     <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
@@ -328,7 +388,7 @@ class SettingTest extends React.Component {
                                 <li className="vertical_line">|</li>
                                 <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li>
                             </ul>
-                            <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
+                            <button id="test_button" onClick={this.testIndicator}>테스트<br />시작</button>
                         </div>
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
@@ -409,12 +469,66 @@ class SettingTest extends React.Component {
                             {/* <img src="/img/graph.png"/> */}
                             <TradingViewWidget symbol="BITSTAMP:BTCUSD" />
                         </div>
-                        <div class="result_container_wrapper">
-                            {/* <div class="result_container">
-                                <div class="result_header">
+                        <div className="result_container_wrapper">
+                            {/* <div className="result_container">
+                                <div className="result_header">
                                     1 구간
                                 </div>
-                                <div class="result_content">
+                                <div className="result_content">
+                                    <div>
+                                        <div><p>총 누적 수익률</p></div>
+                                        <div><p>173.19%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>연 환산 수익률</p></div>
+                                        <div><p>69.23%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>MDD</p></div>
+                                        <div><p>4.30%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>기간 총 거래횟수</p></div>
+                                        <div><p>388회</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>월 평균 거래 횟수</p></div>
+                                        <div><p>13회</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="result_container">
+                                <div className="result_header">
+                                    2 구간
+                                </div>
+                                <div className="result_content">
+                                    <div>
+                                        <div><p>총 누적 수익률</p></div>
+                                        <div><p>173.19%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>연 환산 수익률</p></div>
+                                        <div><p>69.23%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>MDD</p></div>
+                                        <div><p>4.30%</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>기간 총 거래횟수</p></div>
+                                        <div><p>388회</p></div>
+                                    </div>
+                                    <div>
+                                        <div><p>월 평균 거래 횟수</p></div>
+                                        <div><p>13회</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="result_container">
+                                <div className="result_header">
+                                    3 구간
+                                </div>
+                                <div className="result_content">
                                     <div>
                                         <div><p>총 누적 수익률</p></div>
                                         <div><p>173.19%</p></div>

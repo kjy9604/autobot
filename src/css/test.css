@@ -367,7 +367,7 @@
     } */
 
     .horizon_line {
-        border-bottom: 2px solid #4374D9;
+        border-bottom: 0.5px solid #000000;
     }
 
     #result_container {
