@@ -89,7 +89,7 @@ class Main extends React.Component {
 								</div>
 								<div id="autobot_button_container2">
 									<Link to="autobot/test"><button className="main_button" style={{margin: "10px"}}>테스트</button></Link>
-									<Link to="autobot/setting"><button className="main_button">고급설정</button></Link>
+									{/* <Link to="autobot/setting"><button className="main_button">고급설정</button></Link> */}
 								</div>
 							</div>
 							<div className="horizon_line"></div>

@@ -403,6 +403,12 @@
 
     #fee {
         width: 60px;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0.5px;
+        border-radius: 0px;
+        text-align: center;
     }
     
     .test_section {
@@ -451,6 +457,11 @@
     .test_input_section input {
         width: 60px;
         text-align: center;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        border-right-width: 0px;
+        border-bottom-width: 0.5px;
+        border-radius: 0px;
     }
 
     #trading_widget_container {
