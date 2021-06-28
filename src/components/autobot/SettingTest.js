@@ -88,7 +88,7 @@ class SettingTest extends React.Component {
 
         // API는 기입된 구간까지(2구간까지 했으면 2번) 요청함.
 
-        const url = `http://localhost:3000/test`; // 임시주소
+        const url = `http://pentaplant-1933825305.ap-northeast-2.elb.amazonaws.com/backtest`; // 임시주소
 
         // 구간별 퍼센트
         const firstRange = document.querySelector("#first_section_range").value *= 1;
@@ -154,6 +154,7 @@ class SettingTest extends React.Component {
                                 'Access-Control-Allow-Origin': "*"
                             },
                             params: {
+                                active: true,
                                 TimePeriod: "2012-01-01-2013-05-25",
                                 UpPyramiding: firstPyramiding,
                                 StartingAmount: firstAmount,
@@ -386,7 +387,7 @@ class SettingTest extends React.Component {
                                 <li className="vertical_line">|</li>
                                 <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li>
                             </ul>
-                            <button id="test_button" onClick={this.testIndicator}>테스트<br />시작</button>
+                            <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
