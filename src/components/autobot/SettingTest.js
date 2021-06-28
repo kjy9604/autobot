@@ -65,7 +65,6 @@ class SettingTest extends React.Component {
             this.setState({
                 count: this.state.count + 1
             });
-            console.log(this.state.count);
             if(this.state.count + 1 == 3) {
                 document.querySelector(".l_button").remove();
             }
@@ -115,7 +114,6 @@ class SettingTest extends React.Component {
         const firstPyramiding = document.querySelector("#first_section_pyramiding").checked ? "True" : "False";
         const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? "True" : "False";
         const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? "True" : "False";
-        console.log(firstPyramiding)
 
         let totalAmount = "10000";
         // let totalAmount = (firstAmount + secondAmount + thirdAmount).toString();
@@ -376,7 +374,7 @@ class SettingTest extends React.Component {
             return (
                 <>
                     <Title header="Auto 로봇" subTitle="전략 테스트" />
-                    <Loader type="spin" color="black" message={""} />;
+                    <Loader type="spin" color="black" message={""} />
                     <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
