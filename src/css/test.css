@@ -687,4 +687,39 @@
         font-weight: 700;
     }
 
+    #datepicker_container {
+        flex-direction: row;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        flex-wrap: nowrap;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #datepicker_container > div {
+        font-size: 16px;
+        font-weight: 600;
+        background-color: #FFC700;
+        cursor: pointer;
+        flex-wrap: nowrap;
+        border-radius: 5px;
+        width: auto !important;
+        height: auto !important;
+    }
+
+    #datepicker_container * {
+        width: auto !important;
+        height: auto !important;
+        padding-top: 0px;
+    }
+
+    .example-custom-input {
+        cursor: pointer;
+        padding: 5px 15px;
+        border: 0;
+        border-radius: 4px;
+        background-color: #FFC700;
+        color: black;
+    }
+
 }
