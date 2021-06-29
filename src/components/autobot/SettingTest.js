@@ -202,40 +202,42 @@ class SettingTest extends React.Component {
             secondActive = true
         }
 
-        const data = {
-            "data": 
-            [
-                {
-                    active: true,
-                    TimePeriod: "2012-01-01-2013-05-25",
-                    UpPyramiding: firstPyramiding,
-                    StartingAmount: firstAmount.toString(),
-                    PercentRange: firstRange.toString(),
-                    EntryNum: firstEntry.toString(),
-                    PercentReturn: firstGain.toString()
-                },
-                {
-                    active: secondActive,
-                    TimePeriod: "2012-01-01-2013-05-25",
-                    UpPyramiding: secondPyramiding,
-                    StartingAmount: secondAmount.toString(),
-                    PercentRange: secondRange.toString(),
-                    EntryNum: secondEntry.toString(),
-                    PercentReturn: secondGain
-                },
-                {
-                    active: thirdActive,
-                    TimePeriod: "2012-01-01-2013-05-25",
-                    UpPyramiding: thirdPyramiding,
-                    StartingAmount: thirdAmount.toString(),
-                    PercentRange: thirdRange.toString(),
-                    EntryNum: thirdEntry.toString(),
-                    PercentReturn: thirdGain.toString()
-                }
-            ]
-        }
+        const data = 
+            {
+                "data": [
+                    {
+                        active: true,
+                        TimePeriod: "2012-01-01-2013-05-25",
+                        UpPyramiding: firstPyramiding,
+                        StartingAmount: firstAmount.toString(),
+                        PercentRange: firstRange.toString(),
+                        EntryNum: firstEntry.toString(),
+                        PercentReturn: firstGain.toString()
+                    },
+                    {
+                        active: secondActive,
+                        TimePeriod: "2012-01-01-2013-05-25",
+                        UpPyramiding: secondPyramiding,
+                        StartingAmount: secondAmount.toString(),
+                        PercentRange: secondRange.toString(),
+                        EntryNum: secondEntry.toString(),
+                        PercentReturn: secondGain
+                    },
+                    {
+                        active: thirdActive,
+                        TimePeriod: "2012-01-01-2013-05-25",
+                        UpPyramiding: thirdPyramiding,
+                        StartingAmount: thirdAmount.toString(),
+                        PercentRange: thirdRange.toString(),
+                        EntryNum: thirdEntry.toString(),
+                        PercentReturn: thirdGain.toString()
+                    }
+                ]
+            }
 
-        console.log(data.data[0].StartingAmount);
+        document.querySelector(".result_container_wrapper").innerHTML = ""
+
+        // console.log(data.data[0].StartingAmount);
 
         try {
             trackPromise(
@@ -245,13 +247,10 @@ class SettingTest extends React.Component {
                     headers: {
                         'Accept': "application/json",
                         'Content-Type': "application/json",
-                        'Access-Control-Allow-Origin': "*"
+                        'Access-Control-Allow-Origin': "*",
                     },
                     data: data
                 }).then((response) => {
-                    console.log(response.data);
-                    console.log(Object.keys(response.data.data).length)
-                    console.log(response.data.data[1] !== "")
                     for(let i = 0; i < Object.keys(response.data.data).length; i++) {
                         if(response.data.data[i].length === 0) {
                             break;
@@ -360,7 +359,7 @@ class SettingTest extends React.Component {
                             </ul>
                             <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
-                        {/* <div id="datepicker_container" className="line_1">
+                        <div id="datepicker_container" className="line_1">
                             <div>
                                 <DatePicker
                                     locale="ko"
@@ -385,7 +384,7 @@ class SettingTest extends React.Component {
                                     customInput={<ExampleCustomInput />}
                                 />
                             </div>
-                        </div> */}
+                        </div>
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
                                 <p>1구간</p>
