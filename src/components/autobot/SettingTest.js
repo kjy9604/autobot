@@ -9,6 +9,7 @@ import { trackPromise } from 'react-promise-tracker';
 import Loader from '../common/Loader';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import ko from 'date-fns/locale/ko';
+import DatePickerComponent from './DatePickerComponent';
 
 registerLocale("ko", ko);
 
@@ -57,7 +58,7 @@ class SettingTest extends React.Component {
         this.countIncrease = this.countIncrease.bind(this);
         this.countDecrease = this.countDecrease.bind(this);
         this.showResult = this.showResult.bind(this);
-        this.DatePickerComponent = this.DatePickerComponent.bind(this);
+        // this.DatePickerComponent = this.DatePickerComponent.bind(this);
         this.setStartDate = this.setStartDate.bind(this);
         this.setEndDate = this.setEndDate.bind(this);
         this.state = {
@@ -112,54 +113,18 @@ class SettingTest extends React.Component {
         }
     }
 
-    setStartDate(date) {
-        this.state.startDate = date;
+    setStartDate = e => {
+        this.setState({
+            startDate: e.target.value 
+        })
         console.log(this.state.startDate);
     }
 
-    setEndDate(date) {
-        this.state.endDate = date;
+    setEndDate = e => {
+        this.setState({
+            endDate: e.target.value 
+        })
     }
-
-
-
-    DatePickerComponent = () => {
-        const startDate = this.state.startDate;
-        const endDate = this.state.endDate;
-        const ExampleCustomInput = ({ value, onClick }) => (
-            <div>
-                <button className="example-custom-input" onClick={onClick}>
-                    {value}
-                </button>
-            </div>
-        );
-        return (
-            <div>
-                <DatePicker
-                    locale="ko"
-                    dateFormat="yyyy-MM-dd"
-                    selected={this.state.startDate}
-                    selectsStart
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                    onChange={this.setStartDate}
-                    customInput={<ExampleCustomInput />}
-                />
-                -
-                <DatePicker
-                    locale="ko"
-                    dateFormat="yyyy-MM-dd"
-                    selected={this.state.endDate}
-                    selectsEnd
-                    onChange={this.setEndDate}
-                    startDate={this.state.startDate}
-                    endDate={this.state.endDate}
-                    minDate={this.state.startDate}
-                    customInput={<ExampleCustomInput />}
-                />
-            </div>
-        );
-    };
     
     testButton() {
 
@@ -192,6 +157,9 @@ class SettingTest extends React.Component {
         const secondPyramiding = document.querySelector("#second_section_pyramiding").checked ? true : false;
         const thirdPyramiding = document.querySelector("#third_section_pyramiding").checked ? true : false;
 
+        const timePeriod = document.querySelectorAll(".example-custom-input")[0].innerText + "-" + 
+                            document.querySelectorAll(".example-custom-input")[1].innerText
+
         let secondActive = false;
         let thirdActive = false;
 
@@ -214,37 +182,36 @@ class SettingTest extends React.Component {
         }
 
         const data = 
-            {
-                "data": [
-                    {
-                        active: true,
-                        TimePeriod: "2012-01-01-2013-05-25",
-                        UpPyramiding: firstPyramiding,
-                        StartingAmount: firstAmount.toString(),
-                        PercentRange: firstRange.toString(),
-                        EntryNum: firstEntry.toString(),
-                        PercentReturn: firstGain.toString()
-                    },
-                    {
-                        active: secondActive,
-                        TimePeriod: "2012-01-01-2013-05-25",
-                        UpPyramiding: secondPyramiding,
-                        StartingAmount: secondAmount.toString(),
-                        PercentRange: secondRange.toString(),
-                        EntryNum: secondEntry.toString(),
-                        PercentReturn: secondGain
-                    },
-                    {
-                        active: thirdActive,
-                        TimePeriod: "2012-01-01-2013-05-25",
-                        UpPyramiding: thirdPyramiding,
-                        StartingAmount: thirdAmount.toString(),
-                        PercentRange: thirdRange.toString(),
-                        EntryNum: thirdEntry.toString(),
-                        PercentReturn: thirdGain.toString()
-                    }
-                ]
-            }
+            [
+                {
+                    active: true,
+                    TimePeriod: timePeriod,
+                    UpPyramiding: firstPyramiding,
+                    StartingAmount: firstAmount.toString(),
+                    PercentRange: firstRange.toString(),
+                    EntryNum: firstEntry.toString(),
+                    PercentReturn: firstGain.toString()
+                },
+                {
+                    active: secondActive,
+                    TimePeriod: timePeriod,
+                    UpPyramiding: secondPyramiding,
+                    StartingAmount: secondAmount.toString(),
+                    PercentRange: secondRange.toString(),
+                    EntryNum: secondEntry.toString(),
+                    PercentReturn: secondGain
+                },
+                {
+                    active: thirdActive,
+                    TimePeriod: timePeriod,
+                    UpPyramiding: thirdPyramiding,
+                    StartingAmount: thirdAmount.toString(),
+                    PercentRange: thirdRange.toString(),
+                    EntryNum: thirdEntry.toString(),
+                    PercentReturn: thirdGain.toString()
+                }
+            ]
+            
 
         document.querySelector(".result_container_wrapper").innerHTML = ""
 
@@ -370,7 +337,10 @@ class SettingTest extends React.Component {
                             </ul>
                             <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
-                        <div id="datepicker_container" className="line_1">
+                        <div id="datepicker_container">
+                            <DatePickerComponent />
+                        </div>
+                        {/* <div id="datepicker_container" className="line_1">
                             <div>
                                 <DatePicker
                                     locale="ko"
@@ -379,7 +349,8 @@ class SettingTest extends React.Component {
                                     selectsStart
                                     startDate={startDate}
                                     endDate={endDate}
-                                    onChange={date => this.state.startDate = date}
+                                    onChange={this.setStartDate}
+                                    value={this.state.startDate}
                                     customInput={<ExampleCustomInput />}
                                 />
                                 -
@@ -388,14 +359,15 @@ class SettingTest extends React.Component {
                                     dateFormat="yyyy-MM-dd"
                                     selected={endDate}
                                     selectsEnd
-                                    onChange={date => this.state.endDate = date}
+                                    onChange={this.setEndDate}
                                     startDate={startDate}
                                     endDate={endDate}
                                     minDate={startDate}
+                                    value={this.state.endDate}
                                     customInput={<ExampleCustomInput />}
                                 />
                             </div>
-                        </div>
+                        </div> */}
                         <div id="test_section1" className="line_1 test_section_container">
                             <div className="test_section">
                                 <p>1구간</p>
