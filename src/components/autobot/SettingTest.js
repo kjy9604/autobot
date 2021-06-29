@@ -58,6 +58,8 @@ class SettingTest extends React.Component {
         this.countDecrease = this.countDecrease.bind(this);
         this.showResult = this.showResult.bind(this);
         this.DatePickerComponent = this.DatePickerComponent.bind(this);
+        this.setStartDate = this.setStartDate.bind(this);
+        this.setEndDate = this.setEndDate.bind(this);
         this.state = {
             count: 1,
             loading: false,
@@ -110,6 +112,15 @@ class SettingTest extends React.Component {
         }
     }
 
+    setStartDate(date) {
+        this.state.startDate = date;
+        console.log(this.state.startDate);
+    }
+
+    setEndDate(date) {
+        this.state.endDate = date;
+    }
+
 
 
     DatePickerComponent = () => {
@@ -127,23 +138,23 @@ class SettingTest extends React.Component {
                 <DatePicker
                     locale="ko"
                     dateFormat="yyyy-MM-dd"
-                    selected={startDate}
+                    selected={this.state.startDate}
                     selectsStart
-                    startDate={startDate}
-                    endDate={endDate}
-                    onChange={date => this.state.startDate = date}
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    onChange={this.setStartDate}
                     customInput={<ExampleCustomInput />}
                 />
                 -
                 <DatePicker
                     locale="ko"
                     dateFormat="yyyy-MM-dd"
-                    selected={endDate}
+                    selected={this.state.endDate}
                     selectsEnd
-                    onChange={date => this.state.endDate = date}
-                    startDate={startDate}
-                    endDate={endDate}
-                    minDate={startDate}
+                    onChange={this.setEndDate}
+                    startDate={this.state.startDate}
+                    endDate={this.state.endDate}
+                    minDate={this.state.startDate}
                     customInput={<ExampleCustomInput />}
                 />
             </div>

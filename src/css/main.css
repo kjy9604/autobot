@@ -610,6 +610,11 @@
         padding-left: 40px;
     }
 
+    .options_container > div:nth-child(1) > div:nth-child(2), .options_container > div:nth-child(2) > div:nth-child(2) {
+        margin-right: 150px;
+        margin-left: -110px;
+    }
+
     .options_container > div div {
         padding-top: 0px;
     }
