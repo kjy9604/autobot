@@ -690,6 +690,11 @@
         width: 180px !important;
     }
 
+    .test_input_section_items4 {
+        justify-content: center;
+        width: 70px !important;
+    }
+
     .test_input_section_items3 > input[type="checkbox"] {
         zoom: 1.3;
     }
