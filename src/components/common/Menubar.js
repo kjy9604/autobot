@@ -4,6 +4,7 @@ import { Menu, Button } from 'antd';
 import styled from 'styled-components';
 import { MobileView } from 'react-device-detect';
 import { MenuOutlined, MenuFoldOutlined } from '@ant-design/icons';
+import Login from './Login';
 
 // const MenuList = styled.div`
 //     display: flex;
@@ -140,6 +141,9 @@ function Menubar() {
                         </Menu>
                     }
                 </MobileView> */}
+                <div className="nav_logo">
+                    <Login />
+                </div>
             </nav>
         </>
     )
