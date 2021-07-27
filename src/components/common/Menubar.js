@@ -44,7 +44,7 @@ function Menubar() {
                     <li>
                         <Link to="#">거래소</Link>
                         <ul className="dropdown_content">
-                            <li>ABOUT</li>
+                            <li><Link to="/market/about">ABOUT</Link></li>
                             <li>링크연결</li>
                             <li>수수료</li>
                         </ul>
@@ -141,7 +141,7 @@ function Menubar() {
                         </Menu>
                     }
                 </MobileView> */}
-                <div className="nav_logo">
+                <div className="login_button">
                     <Login />
                 </div>
             </nav>
