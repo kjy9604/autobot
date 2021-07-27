@@ -46,7 +46,7 @@ function Menubar() {
                         <ul className="dropdown_content">
                             <li><Link to="/market/about">ABOUT</Link></li>
                             <li>링크연결</li>
-                            <li>수수료</li>
+                            <li><Link to="/market/fees">수수료</Link></li>
                         </ul>
                     </li>
                     <li>|</li>
@@ -54,7 +54,7 @@ function Menubar() {
                         <Link to="#">MTOP</Link>
                         <ul className="dropdown_content">
                             <li>MTOP백서</li>
-                            <li>MTOP비젼</li>
+                            <li><Link to="/mtop/vision">MTOP비젼</Link></li>
                         </ul>
                     </li>
                     <li>|</li>

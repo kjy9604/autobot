@@ -7,6 +7,8 @@ import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Home from './components/home/Home';
 import About from './components/market/About';
+import Fees from './components/market/Fees';
+import Vision from './components/mtop/Vision';
 import Title from './components/common/Title';
 import Main from './components/autobot/Main';
 import Setting from './components/autobot/Setting';
@@ -21,6 +23,8 @@ ReactDOM.render(
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/market/about" component={About} />
+        <Route exact path="/market/fees" component={Fees} />
+        <Route exact path="/mtop/vision" component={Vision} />
         <Route exact path="/autobot" component={Main} />
         <Route exact path="/autobot/setting" component={Setting} />
         <Route exact path="/autobot/test" component={SettingTest} />

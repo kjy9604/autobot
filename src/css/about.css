@@ -1,0 +1,34 @@
+@media (min-width: 360px) and (max-width: 759px) {
+
+}
+
+@media (min-width: 760px) {
+
+    .about_wrapper {
+        max-width: 760px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+    }
+
+    .about_wrapper > div {
+        display: flex;
+        width: 100%;
+        height: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about_content {
+        height: 100%;
+        padding-left: 360px;
+        max-width: 300px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
