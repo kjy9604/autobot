@@ -7,12 +7,12 @@ class Fees extends Component {
         return (
             <>
                 <Title header="교환 수수료" />
-                <div class="fees_wrapper">
-                    <div class="fees_category">
+                <div className="fees_wrapper">
+                    <div className="fees_category">
                         <a>거래 수수료</a>
                         <a>예금 및 인출 수수료</a>
                     </div>
-                    <div class="fees_table">
+                    <div className="fees_table">
                         <table>
                             <thead>
                                 <tr>

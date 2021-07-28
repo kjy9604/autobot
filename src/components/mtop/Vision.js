@@ -7,7 +7,7 @@ class Vision extends Component {
         return (
             <>
                 <Title header="MTOP 비젼" />
-                <div class="vision_wrapper">
+                <div className="vision_wrapper">
                     <div>
                         <span>먼 미래의 비젼만 제시하는 수많은 코인들이 시장에 뿌려지고 있는 상황에</span>
                         <span>BPInvesting은 매월 실제 수익을 창출하고 있는 고도화된 로직을 바탕으로</span>

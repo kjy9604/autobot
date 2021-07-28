@@ -61,8 +61,8 @@ function Menubar() {
                     <li>
                         <Link to="#">추천인 수익</Link>
                         <ul className="dropdown_content">
-                            <li>추천인수익이란?</li>
-                            <li>레벨업 방법</li>
+                            <li><Link to="/recommand/recommandGain">추천인수익이란?</Link></li>
+                            <li><Link to="/recommand/level">레벨업 방법</Link></li>
                             <li>수수료 공유정책</li>
                             <li>추천인 링크발급(배너)</li>
                         </ul>
@@ -71,7 +71,7 @@ function Menubar() {
                     <li>
                         <Link to="/autobot">AUTO 로봇</Link>
                         <ul className="dropdown_content">
-                            <li>ABOUT</li>
+                            <li><Link to="/autobot/about">ABOUT</Link></li>
                             <li>AUTO 결제</li>
                         </ul>
                     </li>
