@@ -53,7 +53,7 @@ function Menubar() {
                     <li> 
                         <Link to="#">MTOP</Link>
                         <ul className="dropdown_content">
-                            <li>MTOP백서</li>
+                            <li><Link to="/mtop/whitePaper">MTOP백서</Link></li>
                             <li><Link to="/mtop/vision">MTOP비젼</Link></li>
                         </ul>
                     </li>
@@ -72,7 +72,7 @@ function Menubar() {
                         <Link to="/autobot">AUTO 로봇</Link>
                         <ul className="dropdown_content">
                             <li><Link to="/autobot/about">ABOUT</Link></li>
-                            <li>AUTO 결제</li>
+                            <li><Link to="/autobot/purchase">AUTO 결제</Link></li>
                         </ul>
                     </li>
                     <li>|</li>
