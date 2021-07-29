@@ -588,7 +588,7 @@
     .login_button {
         width: 40px;
         font-size: 12px;
-        float: left;
+        float: right;
         font-weight: bold;
         padding-top: 6px;
     }
