@@ -36,15 +36,15 @@
         justify-content: center;
         align-items: center;
         margin: 0px auto;
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .vision_wrapper > div {
         display: flex;
         width: 100%;
-        height: auto;
+        height: 300px;
         justify-content: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         margin: 20px 0;
     }

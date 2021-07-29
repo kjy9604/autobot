@@ -5,7 +5,7 @@
 @media (min-width: 760px) {
 
     .ask_wrapper {
-		background: radial-gradient(ellipse at 100% 0%, #636ea2, #4964c2, #4282db);
+		/* background: radial-gradient(ellipse at 100% 0%, #636ea2, #4964c2, #4282db); */
 	}
 
 	.ask_container {
@@ -28,13 +28,16 @@
 
 	.ask_input_container {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.ask_input_container > div > input, .ask_input_container > div > select, .ask_input_container > div > input::placeholder { 
 		border: 0px;
 		border-radius: 0;
 		background: transparent;
-		color: white;
 		font-size: 16px;
 		padding-left: 5px;
 		display: inline;
@@ -59,11 +62,25 @@
 		background: transparent;
 		border: 0px;
 		border-radius: 0;
-		border-bottom: 1px solid white;
+		border-bottom: 1px solid black;
+	}
+
+	.ask_textarea {
+		/* width: 90%;
+		height: 200px; */
+		margin-bottom: 150px !important;
+	}
+
+	.ask_textarea > textarea {
+		width: 90%;
+		height: 120px;
+		resize: none;
 	}
 
 	.recaptcha_container {
-		margin-left: 38px !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.ask_button {
