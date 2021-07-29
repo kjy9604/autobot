@@ -96,7 +96,7 @@ function Menubar() {
                     </li>
                     <li>|</li>
                     <li>
-                        <Link to="#">문의</Link>
+                        <Link to="/ask">문의</Link>
 
                     </li>
                 </ul>

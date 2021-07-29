@@ -19,6 +19,7 @@ import Purchase from './components/autobot/Purchase';
 import Setting from './components/autobot/Setting';
 import SettingTest from './components/autobot/SettingTest';
 import Autobot from './components/autobot/Autobot';
+import Ask from './components/ask/Ask';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
@@ -39,6 +40,7 @@ ReactDOM.render(
         <Route exact path="/autobot/setting" component={Setting} />
         <Route exact path="/autobot/test" component={SettingTest} />
         <Route exact path="/autobot/pyramiding" component={Autobot} />
+        <Route exact path="/ask" component={Ask} />
       </Switch>
       <Footer />
   </Router>,

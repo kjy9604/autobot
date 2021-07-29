@@ -590,8 +590,11 @@
         font-size: 12px;
         float: left;
         font-weight: bold;
-        cursor: pointer;
         padding-top: 6px;
+    }
+
+    .login_button > div:first-child {
+        cursor: pointer;
     }
 
     /*=================================*/
