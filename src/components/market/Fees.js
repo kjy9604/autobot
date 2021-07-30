@@ -12,12 +12,16 @@ class Fees extends Component {
 
     changeToTrading = () => {
         document.querySelector(".deposit_fees_table").style.display = "none";
+        document.querySelector("#deposit_button").style.borderBottom = "0px";
         document.querySelector(".trading_fees_table").style.display = "table";
+        document.querySelector("#trading_button").style.borderBottom = "2px solid black";
     }
 
     changeToDeposit = () => {
         document.querySelector(".trading_fees_table").style.display = "none";
+        document.querySelector("#trading_button").style.borderBottom = "0px";
         document.querySelector(".deposit_fees_table").style.display = "table";
+        document.querySelector("#deposit_button").style.borderBottom = "2px solid black";
     }
 
     render() {
@@ -27,8 +31,8 @@ class Fees extends Component {
                 <div className="fees_wrapper">
                     <div className="fees_container">
                         <div className="fees_category">
-                            <a onClick={this.changeToTrading}>거래 수수료</a>
-                            <a onClick={this.changeToDeposit}>예금 및 인출 수수료</a>
+                            <a id="trading_button" onClick={this.changeToTrading} style={{"borderBottom": "2px solid black"}}>거래 수수료</a>
+                            <a id="deposit_button" onClick={this.changeToDeposit}>예금 및 인출 수수료</a>
                         </div>
                         <div className="fees_table">
                             {/* 거래 수수료 */}
