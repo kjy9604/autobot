@@ -68,4 +68,9 @@
         align-items: center;
         flex-direction: column;
     }
+
+    /* 순서 바꾸기 */
+    .about_wrapper > div:nth-child(2n) > div:nth-child(1) {
+        order: 2;
+    }
 }
