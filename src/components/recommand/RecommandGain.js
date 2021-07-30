@@ -8,7 +8,7 @@ class RecommandGain extends Component {
 			<>
 				<Title header="추천인수익이란?" />
 				<div className="recommand_gain_wrapper">
-					<img src="#" />
+					<img src="/img/recommand.png" />
 					<div className="recommand_gain_text">
 						<p>
 							PP(PentaPlant)는 <span className="bold_text">추천인(레퍼럴코드)</span>이 없으면 가입이 불가능합니다. <br />

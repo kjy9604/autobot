@@ -15,7 +15,7 @@ class SignIn extends Component {
 						나의 정보
 					</div>
 					<div className="info_icon">
-						<img src="#" name="사용자 소속감 직급" />
+						<img src="/img/grade.png" name="사용자 소속감 직급" />
 					</div>
 					<div className="info_information">
 						<p>

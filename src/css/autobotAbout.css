@@ -28,7 +28,15 @@
         margin: 0 0;
     }
     
-    .autobot_about_section1 > div{
+    /* .autobot_about_section1 > div:first-child {
+        width: 40%;
+    } */
+
+    .autobot_about_section1 > div img {
+        width: 100%;
+    }
+
+    .autobot_about_section1 > div:last-child {
         width: 100%;
     }
     
@@ -66,6 +74,11 @@
 
     .autobot_about_section1 > div:first-child {
         width: 40%;
+    }
+
+    .autobot_about_section1 > div > img {
+        width: 100%;
+        margin-right: 10px;
     }
 
     .autobot_about_section1 > div:last-child {

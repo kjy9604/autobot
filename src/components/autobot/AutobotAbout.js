@@ -11,7 +11,7 @@ class AutobotAbout extends Component {
 				<div className="autobot_about_wrapper">
 					<div className="autobot_about_section1">
 						<div>
-							<img src="#" />
+							<img src="/img/autobot-about-01.png" />
 						</div>
 						<div>
 						BPInvesting의 자체 기술로 개발한 US100 자동 트레이딩 로봇은 선물 시장에서 5년째 꾸준히 수익을 발생시키고 있습니다. <br />
