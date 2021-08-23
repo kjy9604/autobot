@@ -77,6 +77,8 @@ class SettingTest extends React.Component {
             secondPyramiding : false,
             thirdPyramiding : false,
 
+            totalAmount: 10000,
+
             startDate : new Date(),
             endDate : new Date(),
         }
@@ -351,9 +353,9 @@ class SettingTest extends React.Component {
                                 <div>테스트 기간 설정</div>
                             </div>
                             <ul id="test_subtitle_button" className="content_subtitle">
-                                <li><a>운용자금 10000$ </a></li>
-                                <li className="vertical_line">|</li>
-                                <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li>
+                                <li><a>운용자금 {this.state.totalAmount.toLocaleString()}$ </a></li>
+                                {/* <li className="vertical_line">|</li>
+                                <li><a>수수료 설정 <input type="number" placeholder="0.4" id="fee" />%</a></li> */}
                             </ul>
                             <button id="test_button" onClick={this.testButton}>테스트<br />시작</button>
                         </div>
