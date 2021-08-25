@@ -54,6 +54,7 @@ class SettingTest extends React.Component {
         this.setStartDate = this.setStartDate.bind(this);
         this.setEndDate = this.setEndDate.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
+        this.toggleLoader = this.toggleLoader.bind(this)
         this.state = {
             count: 1,
             loading: false,
@@ -81,6 +82,7 @@ class SettingTest extends React.Component {
 
             startDate : new Date(),
             endDate : new Date(),
+            isLoading: false,
         }
     }
 
@@ -125,6 +127,12 @@ class SettingTest extends React.Component {
     setEndDate = e => {
         this.setState({
             endDate: e.target.value 
+        })
+    }
+
+    toggleLoader() {
+        this.setState({
+            isLoading: !this.state.isLoading
         })
     }
     
@@ -220,6 +228,7 @@ class SettingTest extends React.Component {
         // console.log(data.data[0].StartingAmount);
 
         try {
+            this.toggleLoader()
             trackPromise(
                 axios({
                     method: 'post',
@@ -261,8 +270,13 @@ class SettingTest extends React.Component {
                             </div>`
                         document.querySelector(".result_container_wrapper").appendChild(div);
                     }
+                    this.toggleLoader()
                 }).catch((error) => {
                     console.log(error);
+                }).finally(() => {
+                    if(!this.state.isLoading) {
+                        this.toggleLoader()
+                    }
                 })
             );
         } catch(error) {
@@ -274,7 +288,7 @@ class SettingTest extends React.Component {
 
     testIndicator() {
         document.querySelector(".result_container_wrapper").innerHTML = "";
-        this.state.loading = true;
+        this.toggleLoader()
 
         if(this.state.loading) {
             document.querySelector(".contentWrap").firstChild.style.display = "block";
@@ -315,7 +329,7 @@ class SettingTest extends React.Component {
                 document.querySelector(".result_container_wrapper").appendChild(div);
         }
 
-        this.state.loading = false;
+        this.toggleLoader()
 
         document.querySelector(".contentWrap").firstChild.style.display = "none";
 
@@ -345,7 +359,13 @@ class SettingTest extends React.Component {
         return (
             <>
                 <Title header="Auto 로봇" subTitle="전략 테스트" />
-                <Loader type="spin" color="black" message={""} />
+                {
+                    this.state.isLoading ? (
+                        <Loader type="spin" color="black" message={""} />
+                    ) : (
+                        <></>
+                    )
+                }
                 <div className="content">
                     <div className="main_content">
                         <div id="test_term_container" className="content_container s_button">
