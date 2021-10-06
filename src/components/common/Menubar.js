@@ -53,6 +53,7 @@ function Menubar() {
                             <li><Link to="/market/about">ABOUT</Link></li>
                             <li>링크연결</li>
                             <li><Link to="/market/fees">수수료</Link></li>
+                            <li><Link to="/autobot/tradeHistory">거래 내역</Link></li>
                         </ul>
                     </li>
                     <li>|</li>
